@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * WZZAB design tokens — the single source of truth for brand values.
+ * Locked against the official WZZAB Guidelines (palette + typographic hierarchy).
+ * Never hardcode a hex or a font size in a component; extend this block instead.
+ */
+@theme {
+  /* --- Palette (Guidelines: Color Palette Definition & Roles) --- */
+  --color-canvas: #ffffff; /* Crisp White       — primary canvas / negative space */
+  --color-cream: #f5e6cc; /* Heritage Cream    — secondary background, cards */
+  --color-ink: #1c1c1c; /* Midnight Charcoal — copy, structure, logos */
+  --color-botanical: #426337; /* Botanical Green   — accent only, max 10-15% of surface */
+
+  /*
+   * The approved palette is deliberately four colours. Secondary text, hairlines and
+   * hover states are alpha steps of the tokens above (text-ink/60, border-ink/10) so
+   * nothing outside the approved palette ever ships.
+   */
+
+  /* --- Type families (font files loaded in lib/fonts.ts) --- */
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-arabic: var(--font-plex-arabic), "Segoe UI", sans-serif;
+
+  /* --- Type scale (Guidelines: Typographic Hierarchy) --- */
+  --text-h1: 3rem; /* 48px */
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.01em;
+  --text-h1--font-weight: 700;
+
+  --text-h2: 2.25rem; /* 36px */
+  --text-h2--line-height: 1.2;
+  --text-h2--font-weight: 600;
+
+  --text-h3: 1.5rem; /* 24px */
+  --text-h3--line-height: 1.3;
+  --text-h3--font-weight: 500;
+
+  --text-h4: 1.125rem; /* 18px */
+  --text-h4--line-height: 1.4;
+  --text-h4--letter-spacing: 0.01em;
+  --text-h4--font-weight: 700;
+
+  --text-eyebrow: 0.8125rem; /* the deck's ALL-CAPS eyebrow, optically sized down for mobile UI */
+  --text-eyebrow--line-height: 1.5;
+  --text-eyebrow--letter-spacing: 0.05em;
+  --text-eyebrow--font-weight: 700;
+
+  --text-body: 1rem; /* 16px base */
+  --text-body--line-height: 1.6;
+
+  --text-caption: 0.875rem; /* 14px */
+  --text-caption--line-height: 1.5;
+
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchored section headings clear of the sticky category bar. */
+    scroll-padding-top: 8.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /*
+   * Arabic gets its own family and extra leading — naskh-derived scripts need more
+   * vertical room than Latin at the same optical size.
+   */
+  :lang(ar) {
+    font-family: var(--font-arabic);
+    line-height: 1.8;
+  }
+
+  /*
+   * Playfair carries Latin display type only. Arabic headings stay in Plex Arabic at a
+   * heavier weight so they read as deliberate display type, never as a fallback.
+   */
+  :lang(ar) .font-display {
+    font-family: var(--font-arabic);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-botanical);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /*
+   * Classic printed-menu leader: name … price. A flex rule rather than a dotted border
+   * on the name, so it mirrors correctly under dir="rtl" with no RTL-specific CSS.
+   */
+  .menu-leader {
+    flex: 1 1 auto;
+    align-self: end;
+    margin-bottom: 0.4em;
+    min-width: 1.25rem;
+    border-bottom: 1px dotted currentColor;
+    opacity: 0.28;
+  }
+
+  /* Horizontal category rail: swipeable on mobile, no visible scrollbar. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -1,0 +1,8 @@
+.next
+node_modules
+public/brand
+app/fonts
+app/og
+*.woff
+*.woff2
+package-lock.json

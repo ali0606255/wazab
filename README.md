@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WZZAB — وزّاب · Digital Menu
 
-## Getting Started
+A premium, bilingual (Arabic / English, RTL-first) digital menu for **WZZAB — وزّاب**, a
+cafe & local bakery. Customers open it from a QR code on their phone. The site is fully
+static, fast, accessible, and on-brand to the pixel.
 
-First, run the development server:
+- **Arabic-first**, with full RTL support and an English (LTR) locale.
+- **Content lives in data files**, not in components — the client can edit the menu
+  without touching code (see [CONTENT.md](./CONTENT.md)).
+- **Static output** — every page is prerendered; there is no database and no runtime
+  data fetching.
+
+## Tech stack
+
+|           |                                                                            |
+| --------- | -------------------------------------------------------------------------- |
+| Framework | Next.js 16 (App Router) + React 19                                         |
+| Language  | TypeScript (strict)                                                        |
+| Styling   | Tailwind CSS v4 (brand tokens in `app/globals.css`)                        |
+| Fonts     | Self-hosted via `next/font/local` — Playfair Display, IBM Plex Sans Arabic |
+| Rendering | Static Site Generation (SSG)                                               |
+| Hosting   | Vercel                                                                     |
+
+## Getting started
+
+Requires Node.js 20+.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open **http://localhost:3000** — it redirects to `/ar` (the default locale). English is
+at `/en`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command             | What it does                                |
+| ------------------- | ------------------------------------------- |
+| `npm run dev`       | Start the dev server                        |
+| `npm run build`     | Production build (also runs the type check) |
+| `npm start`         | Serve the production build locally          |
+| `npm run lint`      | ESLint                                      |
+| `npm run typecheck` | TypeScript, no emit                         |
+| `npm run format`    | Format with Prettier                        |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  [locale]/
+    layout.tsx          # <html lang dir>, fonts, header/footer, per-locale metadata
+    page.tsx            # menu landing (hero + category nav + all categories)
+    [category]/page.tsx # single-category page (SSG per category), deep-linkable
+    opengraph-image.tsx # branded per-locale share image
+    not-found.tsx
+  globals.css           # brand tokens (colours, type scale) — the design source of truth
+  icon.svg              # favicon (brand mark)
+  sitemap.ts, robots.ts
+content/                # ← the client edits these
+  menu.ar.ts            # Arabic menu data
+  menu.en.ts            # English menu data
+  site.ts               # brand strings, story, contact
+lib/
+  types.ts              # MenuCategory, MenuItem, Money, Badge, Locale
+  menu.ts               # the ONLY module that reads content/ (the data-source seam)
+  i18n.ts               # locale config, UI dictionary, price/calorie formatting
+  config.ts             # feature flags (prices, calories, search)
+  fonts.ts, schema.ts
+components/             # presentational components
+public/
+  brand/                # logo variants + favicon source (SVG)
+  menu/                 # item photos (added later)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**The data layer.** Components never import a `content/` file directly — they call
+`lib/menu.ts`, the single module that reads content. That is the deliberate seam where a
+CMS, a database, or a Foodics POS source can be swapped in later without touching a single
+component. The selectors are already async for that reason.
 
-## Deploy on Vercel
+**Brand values flow from tokens.** Every colour and font size is a token in
+`app/globals.css`. Components reference tokens (`bg-cream`, `text-h2`), never raw hex.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Out of scope, by design.** No cart, checkout, ordering, auth, or database in this phase.
+The architecture leaves clean extension points for them; nothing is stubbed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+See [DEPLOY.md](./DEPLOY.md) for the GitHub → Vercel steps and project settings.
+
+## Editing the menu
+
+See [CONTENT.md](./CONTENT.md) — a plain-language guide for non-developers to add or edit
+categories, items, prices, calories, badges, and photos.
