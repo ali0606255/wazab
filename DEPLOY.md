@@ -27,8 +27,10 @@ git push -u origin main
    - **Build Command:** `next build` (default)
    - **Output Directory:** default (managed by Next.js)
    - **Install Command:** `npm install` (default)
-   - **Root Directory:** `./` — unless the repo has the app in a subfolder; if the
-     project lives in a `wzzab-menu/` subfolder, set Root Directory to `wzzab-menu`.
+   - **Root Directory:** leave it as `./` (the repository root). The app lives at the
+     root of the `wazab` repo — `package.json` is right there — so do **not** set this to
+     `wzzab-menu` (that folder only exists locally; there is no such subfolder in the
+     repo, and pointing Vercel at it fails the build with "Exited with code 2").
    - **Node.js Version:** 20 or later.
 4. Click **Deploy**. The first build takes ~1 minute and gives you a
    `https://<project>.vercel.app` URL.
