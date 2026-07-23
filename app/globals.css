@@ -8,7 +8,7 @@
 @theme {
   /* --- Palette (Guidelines: Color Palette Definition & Roles) --- */
   --color-canvas: #ffffff; /* Crisp White       — primary canvas / negative space */
-  --color-cream: #f5e6cc; /* Heritage Cream    — secondary background, cards */
+  --color-cream: #f8e9d1; /* Heritage Cream    — exact value used in the guideline artwork */
   --color-ink: #1c1c1c; /* Midnight Charcoal — copy, structure, logos */
   --color-botanical: #426337; /* Botanical Green   — accent only, max 10-15% of surface */
 

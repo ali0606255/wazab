@@ -49,7 +49,7 @@ export default async function OpengraphImage({ params }: PageProps<"/[locale]">)
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#f5e6cc",
+        backgroundColor: "#f8e9d1",
         color: "#1c1c1c",
         fontFamily: displayFont,
       }}
