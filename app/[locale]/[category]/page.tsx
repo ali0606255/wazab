@@ -50,7 +50,7 @@ export default async function CategoryPage({ params }: PageProps<"/[locale]/[cat
   const t = getDictionary(locale);
 
   return (
-    <main id="menu" className="mx-auto max-w-3xl px-4 py-14">
+    <main id="menu" className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
       <Link
         href={`/${locale}`}
         className="text-eyebrow text-ink/55 hover:text-botanical inline-flex min-h-11 items-center uppercase transition-colors"
@@ -58,13 +58,14 @@ export default async function CategoryPage({ params }: PageProps<"/[locale]/[cat
         {t.backToMenu}
       </Link>
 
-      <div className="mt-6">
+      {/* Menu content on Crisp White paper, floating over the cream leaf field. */}
+      <div className="bg-canvas border-ink/10 mt-4 rounded-2xl border p-5 shadow-[0_1px_2px_rgba(28,28,28,0.05),0_12px_32px_-14px_rgba(28,28,28,0.18)] sm:p-8">
         <MenuCategory category={category} locale={locale} />
-      </div>
 
-      <p className="text-caption border-ink/10 text-ink/45 mt-20 border-t pt-6">
-        {t.placeholderNotice}
-      </p>
+        <p className="text-caption border-ink/10 text-ink/45 mt-20 border-t pt-6">
+          {t.placeholderNotice}
+        </p>
+      </div>
     </main>
   );
 }

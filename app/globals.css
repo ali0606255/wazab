@@ -65,11 +65,31 @@
   }
 
   body {
-    background-color: var(--color-canvas);
+    /* Heritage Cream ground; the leaf tile (which carries its own cream fill) is painted
+       by body::before so it can stay fixed without repainting on every scroll frame. */
+    background-color: var(--color-cream);
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+
+  /*
+   * Tone-on-tone leaf pattern behind all content. The motif matches the brand sprig
+   * (public/brand/icon.svg); leaves are one cream step darker so the field is felt but
+   * never competes with text. A fixed layer beneath the flow — not background-attachment
+   * on the body — so scrolling stays composited and cheap on mobile.
+   */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--color-cream);
+    background-image: url("/brand/leaf-pattern.svg");
+    background-repeat: repeat;
+    background-size: 140px 140px;
+    pointer-events: none;
   }
 
   /*

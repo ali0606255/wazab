@@ -34,7 +34,8 @@ export default async function MenuPage({ params }: PageProps<"/[locale]">) {
         }}
       />
 
-      <section className="bg-cream/60">
+      {/* Transparent hero: the leaf pattern shows through and frames the wordmark. */}
+      <section>
         <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:py-24">
           <BrandMark
             variant="full"
@@ -57,20 +58,24 @@ export default async function MenuPage({ params }: PageProps<"/[locale]">) {
         <CategoryNav categories={categories} label={t.categories} locale={locale} />
       </div>
 
-      <main id="menu" className="mx-auto max-w-3xl px-4 py-14">
-        {ENABLE_SEARCH ? (
-          <SearchFilter menu={menu} locale={locale} availableBadges={usedBadges} />
-        ) : (
-          <div className="space-y-16">
-            {menu.map((category) => (
-              <MenuCategory key={category.id} category={category} locale={locale} />
-            ))}
-          </div>
-        )}
+      <main id="menu" className="mx-auto max-w-3xl px-4 pt-6 pb-16 sm:pt-8">
+        {/* The menu itself sits on a Crisp White "paper" so text never reads over the
+            pattern; the card floats above the cream leaf field with a soft shadow. */}
+        <div className="bg-canvas border-ink/10 rounded-2xl border p-5 shadow-[0_1px_2px_rgba(28,28,28,0.05),0_12px_32px_-14px_rgba(28,28,28,0.18)] sm:p-8">
+          {ENABLE_SEARCH ? (
+            <SearchFilter menu={menu} locale={locale} availableBadges={usedBadges} />
+          ) : (
+            <div className="space-y-16">
+              {menu.map((category) => (
+                <MenuCategory key={category.id} category={category} locale={locale} />
+              ))}
+            </div>
+          )}
 
-        <p className="text-caption border-ink/10 text-ink/45 mt-20 border-t pt-6">
-          {t.placeholderNotice}
-        </p>
+          <p className="text-caption border-ink/10 text-ink/45 mt-20 border-t pt-6">
+            {t.placeholderNotice}
+          </p>
+        </div>
       </main>
     </>
   );
