@@ -1,17 +1,24 @@
 import type { Menu } from "@/lib/types";
 
 /**
- * القائمة بالعربية — المحتوى الرسمي من قائمة وزّاب (الأسعار والسعرات كما وردت في المنيو).
+ * القائمة بالعربية — الأسعار والأصناف معتمدة من تصدير نظام نقاط البيع (POS) الفعلي،
+ * وهو المصدر الرسمي للأسعار. الأوصاف مكتوبة يدوياً بأسلوب العلامة.
  * الصور تُضاف لاحقاً: أضِف حقل image لأي صنف يشير إلى ملف تحت public/menu. راجع CONTENT.md.
  *
  * مهم: يجب أن يتطابق كل `id` هنا مع نظيره في menu.en.ts حتى يعمل تبديل اللغة بشكل صحيح.
- * الأسعار بالريال السعودي، والسعرات بوحدة الكيلوكالوري (سعرة حرارية).
+ * الأسعار بالريال السعودي، والسعرات بوحدة الكيلوكالوري (سعرة حرارية) حيث توفّرت.
  */
 export const menuAr: Menu = [
   {
     id: "breakfast",
     name: "فطور وزّاب",
     items: [
+      {
+        id: "arabic-breakfast-platter",
+        name: "تشكيلة فطور عربي",
+        description: "تشكيلة غنية من أطباق الفطور المحلية، مثالية للمشاركة.",
+        price: { amount: 64, currency: "SAR" },
+      },
       {
         id: "areekah",
         name: "عريكة وزّاب",
@@ -20,33 +27,26 @@ export const menuAr: Menu = [
         calories: 251,
       },
       {
-        id: "local-goat-meat",
-        name: "لحم تيس بلدي",
-        description: "لحم تيس بلدي طازج، مطهو بعناية على الطريقة التقليدية المحلية الأصيلة.",
-        price: { amount: 45, currency: "SAR" },
+        id: "local-meat",
+        name: "لحم تيس طازج",
+        description: "لحم تيس طازج، مطهو بعناية على الطريقة التقليدية المحلية الأصيلة.",
+        price: { amount: 39, currency: "SAR" },
         calories: 230,
       },
       {
-        id: "foul",
-        name: "فول وزّاب",
+        id: "classic-foul",
+        name: "فول وزّاب الكلاسيك",
         description:
           "فول أبيض بزيت الزيتون النقي، محضّر على طريقة وزّاب الخاصة، ويُقدّم مع القرص الطازج.",
-        price: { amount: 18, currency: "SAR" },
+        price: { amount: 19, currency: "SAR" },
         calories: 210,
         badges: ["vegan"],
       },
       {
-        id: "shakshuka",
-        name: "شكشوكة وزّاب",
-        description: "بيض بصلصة الطماطم والخضار على طريقة وزّاب، تُقدّم مع القرص الطازج.",
+        id: "mashed-fava-beans",
+        name: "فول مكشّن",
+        description: "فول مهروس بنكهة غنية، يُقدّم دافئاً مع القرص الطازج.",
         price: { amount: 23, currency: "SAR" },
-        calories: 265,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "qallabah",
-        name: "قلابة وزّاب",
-        description: "قلابة معدّة من الفول المطهو بزيت الزيتون النقي، وتُقدّم مع قرص وزّاب الساخن.",
         badges: ["vegan"],
       },
     ],
@@ -59,11 +59,13 @@ export const menuAr: Menu = [
         id: "creamy-chicken-cube",
         name: "كيوب الدجاج بالكريمة",
         description: "قطع دجاج طرية مطهوة بالكريمة الغنية داخل مكعب بريوش محمّص بالزبدة.",
+        price: { amount: 41, currency: "SAR" },
       },
       {
         id: "eggplant-potato-fatteh",
         name: "فتة الباذنجان والبطاطس",
         description: "طبقات من الباذنجان والبطاطا والخس والصوص الكريمي، تتوّج بقرمشة ذهبية.",
+        price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -71,6 +73,7 @@ export const menuAr: Menu = [
         name: "أومليت الزبدة والأجبان",
         description:
           "أومليت مخملي بالزبدة، محشو بمزيج غني من الأجبان، ويُقدّم مع سلطة ورقيات طازجة.",
+        price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -78,6 +81,7 @@ export const menuAr: Menu = [
         name: "سلطة الجرجير",
         description:
           "جرجير طازج مع شرائح التفاح والخس والرمان والجوز المحمّص وجبن الفيتا والتتبيلة الخاصة.",
+        price: { amount: 33, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -85,6 +89,7 @@ export const menuAr: Menu = [
         name: "سكرامبل البيض بالترافل",
         description:
           "بريوش محمّص يعلوه بيض سكرامبل كريمي بنكهة الترافل مع صوص المشروم والبارميزان.",
+        price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -92,12 +97,14 @@ export const menuAr: Menu = [
         name: "طاوة الشكشوكة الخضراء",
         description:
           "بيض بصلصة خضراء غنية بالأعشاب العطرية، يعلوها جبن الموزاريلا، وتُقدّم مع القرص.",
+        price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
         id: "halloumi-hamsah",
         name: "حمسة حلوم",
         description: "قطع حلوم مطهوة بخلطة وزّاب الخاصة، تُقدّم ساخنة مع قرص وزّاب الطازج.",
+        price: { amount: 34, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -105,18 +112,21 @@ export const menuAr: Menu = [
         name: "ساوردو الشمندر والأفوكادو بالأجبان",
         description:
           "خبز ساوردو بالتخمير الطبيعي، يعلوه الأفوكادو والشمندر المتبّل والأجبان المنوّعة.",
+        price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
         id: "makdous-scramble-croissant",
         name: "كرواسون سكرامبل البيض مع خلطة المكدوس",
         description: "كرواسون زبدي فاخر، محشو بسكرامبل البيض الكريمي وخلطتنا الخاصة بالمكدوس.",
+        price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
         id: "tuna-danish",
         name: "دانيش التونة الهش",
         description: "دانيش ذهبي هش، محشو بخليط تونة كريمي فاخر، ويُقدّم مع شيبس البطاطس المقرمش.",
+        price: { amount: 34, currency: "SAR" },
       },
     ],
   },
@@ -135,12 +145,24 @@ export const menuAr: Menu = [
         badges: ["vegetarian"],
       },
       {
-        id: "tuna-cheese-disc",
-        name: "قرص خبز بالتونة",
-        description:
-          "يُحضّر من عجينة الأجداد المحلية بالتخمير الطبيعي، ويُخبز بالفرن ويُقدّم بالتونة والزيتون.",
-        price: { amount: 24, currency: "SAR" },
-        calories: 614,
+        id: "halloumi-pesto-pizza-disc",
+        name: "قرص بيتزا الحلوم والبيستو",
+        description: "قرص مخبوز طازجاً بطريقة البيتزا، بحشوة الحلوم والبيستو.",
+        price: { amount: 27, currency: "SAR" },
+        badges: ["vegetarian"],
+      },
+      {
+        id: "halloumi-pesto-flatbread",
+        name: "فلات الحلوم والبيستو",
+        description: "خبز مسطّح طازج بحشوة الحلوم والبيستو.",
+        price: { amount: 39, currency: "SAR" },
+        badges: ["vegetarian"],
+      },
+      {
+        id: "sambousa-disc",
+        name: "قرص سنبوسة",
+        description: "قرص خبز طازج بحشوة السنبوسة.",
+        price: { amount: 23, currency: "SAR" },
       },
       {
         id: "smoked-cheese-disc",
@@ -156,32 +178,9 @@ export const menuAr: Menu = [
         name: "قرص خبز البيض بالأجبان",
         description:
           "يُحضّر من عجينة الأجداد المحلية بالتخمير الطبيعي، ويُقدّم بالبيض المسلوق والأجبان والزيتون.",
-        price: { amount: 24, currency: "SAR" },
-        calories: 419,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "cheese-jam-disc",
-        name: "قرص خبز بالأجبان والمربى",
-        description:
-          "يُحضّر من عجينة الأجداد المحلية بالتخمير الطبيعي، ويُخبز بالفرن ويُقدّم بالأجبان والمربى.",
-        price: { amount: 24, currency: "SAR" },
-        calories: 645,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "cheese-cell",
-        name: "خلية جبن",
-        description: "تُحضّر يومياً طازجة بحشوة الأجبان.",
-        price: { amount: 19, currency: "SAR" },
-        calories: 386,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "breakfast-disc",
-        name: "قرص الأفطار",
         price: { amount: 23, currency: "SAR" },
         calories: 419,
+        badges: ["vegetarian"],
       },
       {
         id: "liver-cheese-disc",
@@ -195,18 +194,146 @@ export const menuAr: Menu = [
         price: { amount: 24, currency: "SAR" },
         calories: 200,
       },
+    ],
+  },
+  {
+    id: "snacks",
+    name: "سناكس وإضافات",
+    items: [
       {
-        id: "cheese-berry-disc",
-        name: "قرص الأجبان بالتوت",
-        price: { amount: 21, currency: "SAR" },
-        calories: 645,
+        id: "fresh-orange-juice",
+        name: "عصير برتقال طازج",
+        price: { amount: 10, currency: "SAR" },
+        badges: ["vegan"],
+      },
+      { id: "chips", name: "شبس", price: { amount: 9, currency: "SAR" } },
+      { id: "popcorn", name: "فشار", price: { amount: 9, currency: "SAR" } },
+      { id: "mixed-nuts", name: "مكسرات مشكلة", price: { amount: 12, currency: "SAR" } },
+      { id: "pumpkin-seeds", name: "حب قرع", price: { amount: 8, currency: "SAR" } },
+      {
+        id: "dates-tahini",
+        name: "تمر وطحينة",
+        price: { amount: 8, currency: "SAR" },
+        badges: ["vegetarian"],
+      },
+      {
+        id: "water",
+        name: "ماء",
+        price: { amount: 2, currency: "SAR" },
+        badges: ["vegan"],
+      },
+      {
+        id: "sparkling-water-lemon",
+        name: "مياه غازية بالليمون",
+        price: { amount: 6, currency: "SAR" },
+        badges: ["vegan"],
+      },
+      {
+        id: "glass-still-water",
+        name: "ماء زجاج",
+        price: { amount: 4, currency: "SAR" },
+        badges: ["vegan"],
+      },
+    ],
+  },
+  {
+    id: "sweets",
+    name: "الحلا",
+    items: [
+      {
+        id: "wzzab-baklava",
+        name: "بقلاوة وزّاب",
+        price: { amount: 18, currency: "SAR" },
+        calories: 1000,
+      },
+      {
+        id: "baklava-box",
+        name: "صندوق بقلاوة وزّاب",
+        price: { amount: 47, currency: "SAR" },
+        calories: 1400,
+      },
+      {
+        id: "pistachio-baklava",
+        name: "بقلاوة بستاشيو",
+        price: { amount: 18, currency: "SAR" },
+      },
+      {
+        id: "pistachio-baklava-box",
+        name: "صندوق بقلاوة بستاشيو",
+        price: { amount: 47, currency: "SAR" },
+      },
+      {
+        id: "baklava-ice-cream",
+        name: "بقلاوة بالآيسكريم",
+        price: { amount: 29, currency: "SAR" },
+      },
+      {
+        id: "truffle-pineapple",
+        name: "ترافل أناناس",
+        price: { amount: 28, currency: "SAR" },
+        calories: 705,
+      },
+      {
+        id: "truffle-mango",
+        name: "ترافل مانقو",
+        price: { amount: 28, currency: "SAR" },
+      },
+      {
+        id: "coconut-mango",
+        name: "كوكنت مانقو",
+        price: { amount: 28, currency: "SAR" },
+        calories: 300,
+      },
+      {
+        id: "cheesecake-brownies",
+        name: "تشيز براونيز",
+        price: { amount: 28, currency: "SAR" },
+        calories: 705,
+      },
+      {
+        id: "pecan-tiramisu",
+        name: "تراميسو بيكان",
+        price: { amount: 28, currency: "SAR" },
+      },
+      {
+        id: "trambello-vanilla",
+        name: "ترامبيلو فانيلا",
+        price: { amount: 22, currency: "SAR" },
+      },
+      {
+        id: "trambello-berry",
+        name: "ترامبيلو توت",
+        price: { amount: 22, currency: "SAR" },
+      },
+      {
+        id: "kunafa",
+        name: "كنافة",
+        price: { amount: 19, currency: "SAR" },
+      },
+      {
+        id: "oshbulbul",
+        name: "عش بلبل",
+        price: { amount: 18, currency: "SAR" },
+      },
+      {
+        id: "date-maamoul",
+        name: "معمول تمر",
+        price: { amount: 5, currency: "SAR" },
+        calories: 130,
+      },
+      {
+        id: "cheese-cell",
+        name: "خلية جبن",
+        description: "تُحضّر يومياً طازجة بحشوة الأجبان.",
+        price: { amount: 19, currency: "SAR" },
+        calories: 386,
         badges: ["vegetarian"],
       },
     ],
   },
   {
     id: "hot-beverages",
-    name: "المشروبات الساخنة",
+    name: "الشاي والقهوة السعودية",
     items: [
       {
         id: "tea-pot",
@@ -237,8 +364,8 @@ export const menuAr: Menu = [
         calories: 3,
       },
       {
-        id: "family-mug-tea-refill",
-        name: "إعادة تعبئة مق عائلي شاي",
+        id: "large-mug-tea-refill",
+        name: "إعادة تعبئة مق كبير شاي",
         price: { amount: 21, currency: "SAR" },
         calories: 25,
       },
@@ -294,6 +421,17 @@ export const menuAr: Menu = [
         price: { amount: 65, currency: "SAR" },
         calories: 30,
       },
+      {
+        id: "daffi",
+        name: "دافي",
+        price: { amount: 9, currency: "SAR" },
+      },
+      {
+        id: "premium-saudi-coffee-beans",
+        name: "بن سعودي فاخر",
+        description: "حبوب قهوة سعودية فاخرة، معبأة لتُحضَّر في المنزل.",
+        price: { amount: 55, currency: "SAR" },
+      },
     ],
   },
   {
@@ -327,13 +465,13 @@ export const menuAr: Menu = [
       {
         id: "luxury-crop-cold-v60",
         name: "محصول فاخر بارد V60",
-        price: { amount: 28, currency: "SAR" },
+        price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       {
         id: "luxury-crop-hot-v60",
         name: "محصول فاخر حار V60",
-        price: { amount: 28, currency: "SAR" },
+        price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       { id: "latte", name: "لاتيه", price: { amount: 16, currency: "SAR" }, calories: 100 },
@@ -355,12 +493,29 @@ export const menuAr: Menu = [
         price: { amount: 18, currency: "SAR" },
         calories: 170,
       },
-      { id: "americano", name: "أمريكانو", price: { amount: 13, currency: "SAR" }, calories: 20 },
+      {
+        id: "hot-americano",
+        name: "أمريكانو حار",
+        price: { amount: 13, currency: "SAR" },
+        calories: 20,
+      },
+      {
+        id: "ice-americano",
+        name: "آيس أمريكانو",
+        price: { amount: 14, currency: "SAR" },
+      },
+      {
+        id: "hot-chocolate",
+        name: "هوت شوكلت",
+        price: { amount: 14, currency: "SAR" },
+        calories: 30,
+        badges: ["vegetarian"],
+      },
     ],
   },
   {
-    id: "other-drinks",
-    name: "مشروبات أخرى",
+    id: "cold-drinks",
+    name: "المشروبات الباردة",
     items: [
       {
         id: "mojito-code-red",
@@ -375,83 +530,21 @@ export const menuAr: Menu = [
         calories: 190,
       },
       {
-        id: "hot-chocolate",
-        name: "هوت شوكلت",
-        price: { amount: 14, currency: "SAR" },
-        calories: 30,
-      },
-      {
-        id: "hibiscus",
-        name: "كركديه",
+        id: "cold-hibiscus",
+        name: "كركديه بارد",
         price: { amount: 17, currency: "SAR" },
         calories: 20,
         badges: ["vegan"],
       },
-    ],
-  },
-  {
-    id: "sweets",
-    name: "الحلا",
-    items: [
       {
-        id: "baklava-box-small",
-        name: "بقلاوة وزّاب بوكس صغير",
-        price: { amount: 18, currency: "SAR" },
-        calories: 1000,
+        id: "ice-tea",
+        name: "آيس تي",
+        price: { amount: 21, currency: "SAR" },
       },
       {
-        id: "baklava-box-large",
-        name: "بقلاوة وزّاب بوكس كبير",
-        price: { amount: 59, currency: "SAR" },
-        calories: 1400,
-      },
-      {
-        id: "pineapple-truffle",
-        name: "ترافل أناناس",
-        price: { amount: 36, currency: "SAR" },
-        calories: 705,
-      },
-      {
-        id: "mango-pudding",
-        name: "بودنق مانقو",
-        price: { amount: 36, currency: "SAR" },
-        calories: 644,
-      },
-      {
-        id: "cheesecake-brownies",
-        name: "تشيز براونيز",
-        price: { amount: 28, currency: "SAR" },
-        calories: 705,
-      },
-      {
-        id: "honey-cake",
-        name: "كيكة عسل",
-        price: { amount: 28, currency: "SAR" },
-        calories: 680,
-      },
-      {
-        id: "date-maamoul",
-        name: "معمول تمر",
-        price: { amount: 5, currency: "SAR" },
-        calories: 130,
-      },
-      {
-        id: "coconut-rose",
-        name: "كوكنت ورد",
-        price: { amount: 28, currency: "SAR" },
-        calories: 250,
-      },
-      {
-        id: "coconut-mango",
-        name: "كوكنت مانقو",
-        price: { amount: 28, currency: "SAR" },
-        calories: 300,
-      },
-      {
-        id: "kinder-roll",
-        name: "كندر رول",
-        price: { amount: 28, currency: "SAR" },
-        calories: 300,
+        id: "alfreedo",
+        name: "الفريدو",
+        price: { amount: 16, currency: "SAR" },
       },
     ],
   },

@@ -1,18 +1,24 @@
 import type { Menu } from "@/lib/types";
 
 /**
- * English menu — official WZZAB content. Prices and calories are taken from the printed
- * menu; English for the bakery, coffee and beverage sections uses the client's own
- * translations, with the remaining items translated to match. See CONTENT.md.
+ * English menu — prices and items are sourced from the live POS product export, the
+ * authoritative source for pricing. Descriptions are written by hand in the brand voice.
  *
  * Important: every `id` here must match its counterpart in menu.ar.ts so the language
- * switcher can keep the reader on the same item. Prices are in SAR, calories in kcal.
+ * switcher can keep the reader on the same item. Prices are in SAR, calories in kcal
+ * where available.
  */
 export const menuEn: Menu = [
   {
     id: "breakfast",
     name: "WZZAB Breakfast",
     items: [
+      {
+        id: "arabic-breakfast-platter",
+        name: "Arabic Breakfast Platter",
+        description: "A generous spread of local breakfast dishes, perfect for sharing.",
+        price: { amount: 64, currency: "SAR" },
+      },
       {
         id: "areekah",
         name: "WZZAB Areekah",
@@ -21,34 +27,26 @@ export const menuEn: Menu = [
         calories: 251,
       },
       {
-        id: "local-goat-meat",
+        id: "local-meat",
         name: "Local Goat Meat",
         description: "Fresh local goat meat, carefully cooked in the authentic local tradition.",
-        price: { amount: 45, currency: "SAR" },
+        price: { amount: 39, currency: "SAR" },
         calories: 230,
       },
       {
-        id: "foul",
-        name: "WZZAB Foul",
+        id: "classic-foul",
+        name: "WZZAB Classic Foul",
         description:
           "White fava beans in pure olive oil, prepared the signature WZZAB way, served with fresh disc bread.",
-        price: { amount: 18, currency: "SAR" },
+        price: { amount: 19, currency: "SAR" },
         calories: 210,
         badges: ["vegan"],
       },
       {
-        id: "shakshuka",
-        name: "WZZAB Shakshuka",
-        description:
-          "Eggs in a tomato and vegetable sauce, WZZAB style, served with fresh disc bread.",
+        id: "mashed-fava-beans",
+        name: "Mashed Fava Beans",
+        description: "Richly seasoned mashed fava beans, served warm with fresh disc bread.",
         price: { amount: 23, currency: "SAR" },
-        calories: 265,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "qallabah",
-        name: "WZZAB Qallabah",
-        description: "Fava beans slow-cooked in pure olive oil, served with hot WZZAB disc bread.",
         badges: ["vegan"],
       },
     ],
@@ -61,12 +59,14 @@ export const menuEn: Menu = [
         id: "creamy-chicken-cube",
         name: "Creamy Chicken Cube",
         description: "Tender chicken in a rich cream sauce inside a butter-toasted brioche cube.",
+        price: { amount: 41, currency: "SAR" },
       },
       {
         id: "eggplant-potato-fatteh",
         name: "Eggplant & Potato Fatteh",
         description:
           "Layers of eggplant, potato, lettuce and creamy sauce, crowned with a golden crunch.",
+        price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -74,6 +74,7 @@ export const menuEn: Menu = [
         name: "Butter & Cheese Omelette",
         description:
           "A velvety butter omelette filled with a rich cheese blend, served with a fresh leaf salad.",
+        price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -81,6 +82,7 @@ export const menuEn: Menu = [
         name: "Arugula Salad",
         description:
           "Fresh arugula with apple slices, lettuce, pomegranate, toasted walnuts, feta and our special dressing.",
+        price: { amount: 33, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -88,6 +90,7 @@ export const menuEn: Menu = [
         name: "Truffle Scrambled Eggs",
         description:
           "Toasted brioche topped with creamy truffle scrambled eggs, mushroom sauce and parmesan.",
+        price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -95,6 +98,7 @@ export const menuEn: Menu = [
         name: "Green Shakshuka Pan",
         description:
           "Eggs in a herb-rich green sauce topped with mozzarella, served with disc bread.",
+        price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -102,6 +106,7 @@ export const menuEn: Menu = [
         name: "Halloumi Hamsah",
         description:
           "Halloumi cooked in the special WZZAB blend, served hot with fresh disc bread.",
+        price: { amount: 34, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -109,6 +114,7 @@ export const menuEn: Menu = [
         name: "Beet & Avocado Sourdough",
         description:
           "Naturally leavened sourdough topped with avocado, spiced beetroot and assorted cheeses.",
+        price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -116,6 +122,7 @@ export const menuEn: Menu = [
         name: "Makdous Scramble Croissant",
         description:
           "A buttery croissant filled with creamy scrambled eggs and our special makdous blend.",
+        price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
       },
       {
@@ -123,6 +130,7 @@ export const menuEn: Menu = [
         name: "Flaky Tuna Danish",
         description:
           "A golden, flaky danish filled with a rich, creamy tuna blend, served with crispy potato chips.",
+        price: { amount: 34, currency: "SAR" },
       },
     ],
   },
@@ -141,12 +149,24 @@ export const menuEn: Menu = [
         badges: ["vegetarian"],
       },
       {
-        id: "tuna-cheese-disc",
-        name: "Tuna & Cheese Bread",
-        description:
-          "Prepared from our ancestors' local dough using natural fermentation, oven-baked and served with tuna and olives.",
-        price: { amount: 24, currency: "SAR" },
-        calories: 614,
+        id: "halloumi-pesto-pizza-disc",
+        name: "Halloumi & Pesto Pizza Disc",
+        description: "A fresh-baked disc, pizza style, topped with halloumi and pesto.",
+        price: { amount: 27, currency: "SAR" },
+        badges: ["vegetarian"],
+      },
+      {
+        id: "halloumi-pesto-flatbread",
+        name: "Halloumi & Pesto Flatbread",
+        description: "Fresh flatbread filled with halloumi and pesto.",
+        price: { amount: 39, currency: "SAR" },
+        badges: ["vegetarian"],
+      },
+      {
+        id: "sambousa-disc",
+        name: "Sambousa Disc",
+        description: "Fresh-baked disc bread with a sambousa filling.",
+        price: { amount: 23, currency: "SAR" },
       },
       {
         id: "smoked-cheese-disc",
@@ -162,32 +182,9 @@ export const menuEn: Menu = [
         name: "Scrambled Egg & Cheese Bread",
         description:
           "Prepared with our ancestors' local dough using natural fermentation, served with golden eggs, cheese and olives.",
-        price: { amount: 24, currency: "SAR" },
-        calories: 419,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "cheese-jam-disc",
-        name: "Cheese & Jam Bread",
-        description:
-          "Prepared with local ancestral dough using natural leavening, oven-baked and served with cheese and jam.",
-        price: { amount: 24, currency: "SAR" },
-        calories: 645,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "cheese-cell",
-        name: "Cheese Cell",
-        description: "Prepared fresh daily with a cheese filling.",
-        price: { amount: 19, currency: "SAR" },
-        calories: 386,
-        badges: ["vegetarian"],
-      },
-      {
-        id: "breakfast-disc",
-        name: "Breakfast Disc",
         price: { amount: 23, currency: "SAR" },
         calories: 419,
+        badges: ["vegetarian"],
       },
       {
         id: "liver-cheese-disc",
@@ -201,18 +198,146 @@ export const menuEn: Menu = [
         price: { amount: 24, currency: "SAR" },
         calories: 200,
       },
+    ],
+  },
+  {
+    id: "snacks",
+    name: "Snacks & Extras",
+    items: [
       {
-        id: "cheese-berry-disc",
-        name: "Cheese & Berry Disc",
-        price: { amount: 21, currency: "SAR" },
-        calories: 645,
+        id: "fresh-orange-juice",
+        name: "Fresh Orange Juice",
+        price: { amount: 10, currency: "SAR" },
+        badges: ["vegan"],
+      },
+      { id: "chips", name: "Chips", price: { amount: 9, currency: "SAR" } },
+      { id: "popcorn", name: "Popcorn", price: { amount: 9, currency: "SAR" } },
+      { id: "mixed-nuts", name: "Mixed Nuts", price: { amount: 12, currency: "SAR" } },
+      { id: "pumpkin-seeds", name: "Pumpkin Seeds", price: { amount: 8, currency: "SAR" } },
+      {
+        id: "dates-tahini",
+        name: "Dates & Tahini",
+        price: { amount: 8, currency: "SAR" },
+        badges: ["vegetarian"],
+      },
+      {
+        id: "water",
+        name: "Water",
+        price: { amount: 2, currency: "SAR" },
+        badges: ["vegan"],
+      },
+      {
+        id: "sparkling-water-lemon",
+        name: "Sparkling Water with Lemon",
+        price: { amount: 6, currency: "SAR" },
+        badges: ["vegan"],
+      },
+      {
+        id: "glass-still-water",
+        name: "Glass Still Water",
+        price: { amount: 4, currency: "SAR" },
+        badges: ["vegan"],
+      },
+    ],
+  },
+  {
+    id: "sweets",
+    name: "Sweets",
+    items: [
+      {
+        id: "wzzab-baklava",
+        name: "WZZAB Baklava",
+        price: { amount: 18, currency: "SAR" },
+        calories: 1000,
+      },
+      {
+        id: "baklava-box",
+        name: "WZZAB Baklava Box",
+        price: { amount: 47, currency: "SAR" },
+        calories: 1400,
+      },
+      {
+        id: "pistachio-baklava",
+        name: "Pistachio Baklava",
+        price: { amount: 18, currency: "SAR" },
+      },
+      {
+        id: "pistachio-baklava-box",
+        name: "Pistachio Baklava Box",
+        price: { amount: 47, currency: "SAR" },
+      },
+      {
+        id: "baklava-ice-cream",
+        name: "Baklava with Ice Cream",
+        price: { amount: 29, currency: "SAR" },
+      },
+      {
+        id: "truffle-pineapple",
+        name: "Truffle Pineapple",
+        price: { amount: 28, currency: "SAR" },
+        calories: 705,
+      },
+      {
+        id: "truffle-mango",
+        name: "Truffle Mango",
+        price: { amount: 28, currency: "SAR" },
+      },
+      {
+        id: "coconut-mango",
+        name: "Coconut Mango",
+        price: { amount: 28, currency: "SAR" },
+        calories: 300,
+      },
+      {
+        id: "cheesecake-brownies",
+        name: "Cheesecake Brownies",
+        price: { amount: 28, currency: "SAR" },
+        calories: 705,
+      },
+      {
+        id: "pecan-tiramisu",
+        name: "Pecan Tiramisu",
+        price: { amount: 28, currency: "SAR" },
+      },
+      {
+        id: "trambello-vanilla",
+        name: "Trambello Vanilla",
+        price: { amount: 22, currency: "SAR" },
+      },
+      {
+        id: "trambello-berry",
+        name: "Trambello Berry",
+        price: { amount: 22, currency: "SAR" },
+      },
+      {
+        id: "kunafa",
+        name: "Kunafa",
+        price: { amount: 19, currency: "SAR" },
+      },
+      {
+        id: "oshbulbul",
+        name: "Oshbulbul",
+        price: { amount: 18, currency: "SAR" },
+      },
+      {
+        id: "date-maamoul",
+        name: "Date Maamoul",
+        price: { amount: 5, currency: "SAR" },
+        calories: 130,
+      },
+      {
+        id: "cheese-cell",
+        name: "Cheese Cell",
+        description: "Prepared fresh daily with a cheese filling.",
+        price: { amount: 19, currency: "SAR" },
+        calories: 386,
         badges: ["vegetarian"],
       },
     ],
   },
   {
     id: "hot-beverages",
-    name: "Hot Beverages",
+    name: "Tea & Saudi Coffee",
     items: [
       {
         id: "tea-pot",
@@ -243,14 +368,14 @@ export const menuEn: Menu = [
         calories: 3,
       },
       {
-        id: "family-mug-tea-refill",
-        name: "Refill Family Mug with Tea",
+        id: "large-mug-tea-refill",
+        name: "Large Mug Tea Refill",
         price: { amount: 21, currency: "SAR" },
         calories: 25,
       },
       {
         id: "medium-mug-tea-refill",
-        name: "Refill Medium Mug with Tea",
+        name: "Medium Mug Tea Refill",
         price: { amount: 8, currency: "SAR" },
         calories: 25,
       },
@@ -300,6 +425,17 @@ export const menuEn: Menu = [
         price: { amount: 65, currency: "SAR" },
         calories: 30,
       },
+      {
+        id: "daffi",
+        name: "Daffi",
+        price: { amount: 9, currency: "SAR" },
+      },
+      {
+        id: "premium-saudi-coffee-beans",
+        name: "Premium Saudi Coffee Beans",
+        description: "Premium Saudi coffee beans, packaged to brew at home.",
+        price: { amount: 55, currency: "SAR" },
+      },
     ],
   },
   {
@@ -333,13 +469,13 @@ export const menuEn: Menu = [
       {
         id: "luxury-crop-cold-v60",
         name: "Cool Luxury Crop V60",
-        price: { amount: 28, currency: "SAR" },
+        price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       {
         id: "luxury-crop-hot-v60",
         name: "Hot Premium Crop V60",
-        price: { amount: 28, currency: "SAR" },
+        price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       { id: "latte", name: "Latte", price: { amount: 16, currency: "SAR" }, calories: 100 },
@@ -371,12 +507,29 @@ export const menuEn: Menu = [
         price: { amount: 18, currency: "SAR" },
         calories: 170,
       },
-      { id: "americano", name: "Americano", price: { amount: 13, currency: "SAR" }, calories: 20 },
+      {
+        id: "hot-americano",
+        name: "Hot Americano",
+        price: { amount: 13, currency: "SAR" },
+        calories: 20,
+      },
+      {
+        id: "ice-americano",
+        name: "Ice Americano",
+        price: { amount: 14, currency: "SAR" },
+      },
+      {
+        id: "hot-chocolate",
+        name: "Hot Chocolate",
+        price: { amount: 14, currency: "SAR" },
+        calories: 30,
+        badges: ["vegetarian"],
+      },
     ],
   },
   {
-    id: "other-drinks",
-    name: "Other Drinks",
+    id: "cold-drinks",
+    name: "Cold Drinks",
     items: [
       {
         id: "mojito-code-red",
@@ -391,83 +544,21 @@ export const menuEn: Menu = [
         calories: 190,
       },
       {
-        id: "hot-chocolate",
-        name: "Hot Chocolate",
-        price: { amount: 14, currency: "SAR" },
-        calories: 30,
-      },
-      {
-        id: "hibiscus",
-        name: "Hibiscus",
+        id: "cold-hibiscus",
+        name: "Cold Hibiscus",
         price: { amount: 17, currency: "SAR" },
         calories: 20,
         badges: ["vegan"],
       },
-    ],
-  },
-  {
-    id: "sweets",
-    name: "Sweets",
-    items: [
       {
-        id: "baklava-box-small",
-        name: "Small Baklava & Zap Box",
-        price: { amount: 18, currency: "SAR" },
-        calories: 1000,
+        id: "ice-tea",
+        name: "Ice Tea",
+        price: { amount: 21, currency: "SAR" },
       },
       {
-        id: "baklava-box-large",
-        name: "Large Baklava & Zap Box",
-        price: { amount: 59, currency: "SAR" },
-        calories: 1400,
-      },
-      {
-        id: "pineapple-truffle",
-        name: "Pineapple Truffle",
-        price: { amount: 36, currency: "SAR" },
-        calories: 705,
-      },
-      {
-        id: "mango-pudding",
-        name: "Mango Pudding",
-        price: { amount: 36, currency: "SAR" },
-        calories: 644,
-      },
-      {
-        id: "cheesecake-brownies",
-        name: "Cheesecake Brownies",
-        price: { amount: 28, currency: "SAR" },
-        calories: 705,
-      },
-      {
-        id: "honey-cake",
-        name: "Honey Cake",
-        price: { amount: 28, currency: "SAR" },
-        calories: 680,
-      },
-      {
-        id: "date-maamoul",
-        name: "Date Maamoul",
-        price: { amount: 5, currency: "SAR" },
-        calories: 130,
-      },
-      {
-        id: "coconut-rose",
-        name: "Coconut Rose",
-        price: { amount: 28, currency: "SAR" },
-        calories: 250,
-      },
-      {
-        id: "coconut-mango",
-        name: "Coconut Mango",
-        price: { amount: 28, currency: "SAR" },
-        calories: 300,
-      },
-      {
-        id: "kinder-roll",
-        name: "Kinder Roll",
-        price: { amount: 28, currency: "SAR" },
-        calories: 300,
+        id: "alfreedo",
+        name: "Alfreedo",
+        price: { amount: 16, currency: "SAR" },
       },
     ],
   },
