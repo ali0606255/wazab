@@ -3,7 +3,9 @@ import type { Menu } from "@/lib/types";
 /**
  * القائمة بالعربية — الأسعار والأصناف معتمدة من تصدير نظام نقاط البيع (POS) الفعلي،
  * وهو المصدر الرسمي للأسعار. الأوصاف مكتوبة يدوياً بأسلوب العلامة.
- * الصور تُضاف لاحقاً: أضِف حقل image لأي صنف يشير إلى ملف تحت public/menu. راجع CONTENT.md.
+ * الصور: أضِف حقل image لأي صنف يشير إلى ملف تحت public/menu. راجع CONTENT.md.
+ * بعض الصور مشتركة بين أصناف متشابهة بصرياً (مثال: أقراص الخبز، V60 حسب الحرارة) —
+ * هذا قرار مقصود وليس خطأ.
  *
  * مهم: يجب أن يتطابق كل `id` هنا مع نظيره في menu.en.ts حتى يعمل تبديل اللغة بشكل صحيح.
  * الأسعار بالريال السعودي، والسعرات بوحدة الكيلوكالوري (سعرة حرارية) حيث توفّرت.
@@ -32,6 +34,7 @@ export const menuAr: Menu = [
         description: "لحم تيس طازج، مطهو بعناية على الطريقة التقليدية المحلية الأصيلة.",
         price: { amount: 39, currency: "SAR" },
         calories: 230,
+        image: "/menu/local-meat.webp",
       },
       {
         id: "classic-foul",
@@ -48,6 +51,7 @@ export const menuAr: Menu = [
         description: "فول مهروس بنكهة غنية، يُقدّم دافئاً مع القرص الطازج.",
         price: { amount: 23, currency: "SAR" },
         badges: ["vegan"],
+        image: "/menu/mashed-fava-beans.webp",
       },
     ],
   },
@@ -60,6 +64,7 @@ export const menuAr: Menu = [
         name: "كيوب الدجاج بالكريمة",
         description: "قطع دجاج طرية مطهوة بالكريمة الغنية داخل مكعب بريوش محمّص بالزبدة.",
         price: { amount: 41, currency: "SAR" },
+        image: "/menu/creamy-chicken-cube.webp",
       },
       {
         id: "eggplant-potato-fatteh",
@@ -67,6 +72,7 @@ export const menuAr: Menu = [
         description: "طبقات من الباذنجان والبطاطا والخس والصوص الكريمي، تتوّج بقرمشة ذهبية.",
         price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/eggplant-potato-fatteh.webp",
       },
       {
         id: "butter-cheese-omelette",
@@ -83,6 +89,7 @@ export const menuAr: Menu = [
           "جرجير طازج مع شرائح التفاح والخس والرمان والجوز المحمّص وجبن الفيتا والتتبيلة الخاصة.",
         price: { amount: 33, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/arugula-salad.webp",
       },
       {
         id: "truffle-scrambled-eggs",
@@ -91,6 +98,7 @@ export const menuAr: Menu = [
           "بريوش محمّص يعلوه بيض سكرامبل كريمي بنكهة الترافل مع صوص المشروم والبارميزان.",
         price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/truffle-scrambled-eggs.webp",
       },
       {
         id: "green-shakshuka",
@@ -99,13 +107,16 @@ export const menuAr: Menu = [
           "بيض بصلصة خضراء غنية بالأعشاب العطرية، يعلوها جبن الموزاريلا، وتُقدّم مع القرص.",
         price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/green-shakshuka.webp",
       },
       {
         id: "halloumi-hamsah",
-        name: "حمسة حلوم",
-        description: "قطع حلوم مطهوة بخلطة وزّاب الخاصة، تُقدّم ساخنة مع قرص وزّاب الطازج.",
+        name: "حمسة حلوم بالبيستو",
+        description:
+          "قطع حلوم مطهوة مع البيستو بخلطة وزّاب الخاصة، تُقدّم ساخنة مع قرص وزّاب الطازج.",
         price: { amount: 34, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/halloumi-hamsah.webp",
       },
       {
         id: "beet-avocado-sourdough",
@@ -114,6 +125,7 @@ export const menuAr: Menu = [
           "خبز ساوردو بالتخمير الطبيعي، يعلوه الأفوكادو والشمندر المتبّل والأجبان المنوّعة.",
         price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/beet-avocado-sourdough.webp",
       },
       {
         id: "makdous-scramble-croissant",
@@ -121,12 +133,14 @@ export const menuAr: Menu = [
         description: "كرواسون زبدي فاخر، محشو بسكرامبل البيض الكريمي وخلطتنا الخاصة بالمكدوس.",
         price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/makdous-scramble-croissant.webp",
       },
       {
         id: "tuna-danish",
         name: "دانيش التونة الهش",
         description: "دانيش ذهبي هش، محشو بخليط تونة كريمي فاخر، ويُقدّم مع شيبس البطاطس المقرمش.",
         price: { amount: 34, currency: "SAR" },
+        image: "/menu/tuna-danish.webp",
       },
     ],
   },
@@ -143,6 +157,7 @@ export const menuAr: Menu = [
         price: { amount: 18, currency: "SAR" },
         calories: 567,
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "halloumi-pesto-pizza-disc",
@@ -150,6 +165,7 @@ export const menuAr: Menu = [
         description: "قرص مخبوز طازجاً بطريقة البيتزا، بحشوة الحلوم والبيستو.",
         price: { amount: 27, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/halloumi-pesto-pizza-disc.webp",
       },
       {
         id: "halloumi-pesto-flatbread",
@@ -157,12 +173,14 @@ export const menuAr: Menu = [
         description: "خبز مسطّح طازج بحشوة الحلوم والبيستو.",
         price: { amount: 39, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "sambousa-disc",
         name: "قرص سنبوسة",
         description: "قرص خبز طازج بحشوة السنبوسة.",
         price: { amount: 23, currency: "SAR" },
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "smoked-cheese-disc",
@@ -172,6 +190,7 @@ export const menuAr: Menu = [
         price: { amount: 22, currency: "SAR" },
         calories: 588,
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "egg-cheese-disc",
@@ -181,18 +200,21 @@ export const menuAr: Menu = [
         price: { amount: 23, currency: "SAR" },
         calories: 419,
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "liver-cheese-disc",
         name: "قرص الكبدة بالجبن",
         price: { amount: 25, currency: "SAR" },
         calories: 190,
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "tuna-olive-disc",
         name: "قرص التونة بالزيتون",
         price: { amount: 24, currency: "SAR" },
         calories: 200,
+        image: "/menu/disc-bread-generic.webp",
       },
     ],
   },
@@ -251,6 +273,7 @@ export const menuAr: Menu = [
         name: "صندوق بقلاوة وزّاب",
         price: { amount: 47, currency: "SAR" },
         calories: 1400,
+        image: "/menu/baklava-box.webp",
       },
       {
         id: "pistachio-baklava",
@@ -261,6 +284,7 @@ export const menuAr: Menu = [
         id: "pistachio-baklava-box",
         name: "صندوق بقلاوة بستاشيو",
         price: { amount: 47, currency: "SAR" },
+        image: "/menu/pistachio-baklava-box.webp",
       },
       {
         id: "baklava-ice-cream",
@@ -277,12 +301,14 @@ export const menuAr: Menu = [
         id: "truffle-mango",
         name: "ترافل مانقو",
         price: { amount: 28, currency: "SAR" },
+        image: "/menu/truffle-mango.webp",
       },
       {
         id: "coconut-mango",
         name: "كوكنت مانقو",
         price: { amount: 28, currency: "SAR" },
         calories: 300,
+        image: "/menu/coconut-mango.webp",
       },
       {
         id: "cheesecake-brownies",
@@ -294,6 +320,7 @@ export const menuAr: Menu = [
         id: "pecan-tiramisu",
         name: "تراميسو بيكان",
         price: { amount: 28, currency: "SAR" },
+        image: "/menu/pecan-tiramisu.webp",
       },
       {
         id: "trambello-vanilla",
@@ -341,6 +368,7 @@ export const menuAr: Menu = [
         description: "حبق، وزّاب، نعناع، مخلوط.",
         price: { amount: 30, currency: "SAR" },
         calories: 30,
+        image: "/menu/tea-pot.webp",
       },
       {
         id: "leaf-tea-cup",
@@ -381,6 +409,7 @@ export const menuAr: Menu = [
         description: "تُقدّم مع التمر والطحينة.",
         price: { amount: 33, currency: "SAR" },
         calories: 20,
+        image: "/menu/saudi-coffee-pot.webp",
       },
       {
         id: "saudi-coffee-cup",
@@ -443,24 +472,28 @@ export const menuAr: Menu = [
         name: "إثيوبي بارد V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
+        image: "/menu/cold-v60.webp",
       },
       {
         id: "ethiopian-hot-v60",
         name: "إثيوبي حار V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
+        image: "/menu/hot-v60.webp",
       },
       {
         id: "colombian-cold-v60",
         name: "كولومبي بارد V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
+        image: "/menu/cold-v60.webp",
       },
       {
         id: "colombian-hot-v60",
         name: "كولومبي حار V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
+        image: "/menu/hot-v60.webp",
       },
       {
         id: "luxury-crop-cold-v60",
@@ -474,9 +507,21 @@ export const menuAr: Menu = [
         price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
-      { id: "latte", name: "لاتيه", price: { amount: 16, currency: "SAR" }, calories: 100 },
+      {
+        id: "latte",
+        name: "لاتيه",
+        price: { amount: 16, currency: "SAR" },
+        calories: 100,
+        image: "/menu/latte.webp",
+      },
       { id: "ice-latte", name: "آيس لاتيه", price: { amount: 17, currency: "SAR" }, calories: 88 },
-      { id: "cappuccino", name: "كابتشينو", price: { amount: 16, currency: "SAR" }, calories: 90 },
+      {
+        id: "cappuccino",
+        name: "كابتشينو",
+        price: { amount: 16, currency: "SAR" },
+        calories: 90,
+        image: "/menu/cappuccino.webp",
+      },
       { id: "flat-white", name: "فلات وايت", price: { amount: 15, currency: "SAR" }, calories: 40 },
       { id: "cortado", name: "كورتادو", price: { amount: 14, currency: "SAR" }, calories: 30 },
       { id: "macchiato", name: "مكياتو", price: { amount: 12, currency: "SAR" }, calories: 14 },
@@ -535,6 +580,7 @@ export const menuAr: Menu = [
         price: { amount: 17, currency: "SAR" },
         calories: 20,
         badges: ["vegan"],
+        image: "/menu/cold-hibiscus.webp",
       },
       {
         id: "ice-tea",
@@ -545,6 +591,7 @@ export const menuAr: Menu = [
         id: "alfreedo",
         name: "الفريدو",
         price: { amount: 16, currency: "SAR" },
+        image: "/menu/alfreedo.webp",
       },
     ],
   },

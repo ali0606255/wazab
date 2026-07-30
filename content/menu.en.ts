@@ -3,6 +3,8 @@ import type { Menu } from "@/lib/types";
 /**
  * English menu — prices and items are sourced from the live POS product export, the
  * authoritative source for pricing. Descriptions are written by hand in the brand voice.
+ * Some photos are shared across visually-identical items (e.g. bakery discs, V60 by
+ * temperature) — that is intentional, not a mistake. See CONTENT.md.
  *
  * Important: every `id` here must match its counterpart in menu.ar.ts so the language
  * switcher can keep the reader on the same item. Prices are in SAR, calories in kcal
@@ -32,6 +34,7 @@ export const menuEn: Menu = [
         description: "Fresh local goat meat, carefully cooked in the authentic local tradition.",
         price: { amount: 39, currency: "SAR" },
         calories: 230,
+        image: "/menu/local-meat.webp",
       },
       {
         id: "classic-foul",
@@ -48,6 +51,7 @@ export const menuEn: Menu = [
         description: "Richly seasoned mashed fava beans, served warm with fresh disc bread.",
         price: { amount: 23, currency: "SAR" },
         badges: ["vegan"],
+        image: "/menu/mashed-fava-beans.webp",
       },
     ],
   },
@@ -60,6 +64,7 @@ export const menuEn: Menu = [
         name: "Creamy Chicken Cube",
         description: "Tender chicken in a rich cream sauce inside a butter-toasted brioche cube.",
         price: { amount: 41, currency: "SAR" },
+        image: "/menu/creamy-chicken-cube.webp",
       },
       {
         id: "eggplant-potato-fatteh",
@@ -68,6 +73,7 @@ export const menuEn: Menu = [
           "Layers of eggplant, potato, lettuce and creamy sauce, crowned with a golden crunch.",
         price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/eggplant-potato-fatteh.webp",
       },
       {
         id: "butter-cheese-omelette",
@@ -84,6 +90,7 @@ export const menuEn: Menu = [
           "Fresh arugula with apple slices, lettuce, pomegranate, toasted walnuts, feta and our special dressing.",
         price: { amount: 33, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/arugula-salad.webp",
       },
       {
         id: "truffle-scrambled-eggs",
@@ -92,6 +99,7 @@ export const menuEn: Menu = [
           "Toasted brioche topped with creamy truffle scrambled eggs, mushroom sauce and parmesan.",
         price: { amount: 37, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/truffle-scrambled-eggs.webp",
       },
       {
         id: "green-shakshuka",
@@ -100,14 +108,16 @@ export const menuEn: Menu = [
           "Eggs in a herb-rich green sauce topped with mozzarella, served with disc bread.",
         price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/green-shakshuka.webp",
       },
       {
         id: "halloumi-hamsah",
-        name: "Halloumi Hamsah",
+        name: "Halloumi Hamsah with Pesto",
         description:
-          "Halloumi cooked in the special WZZAB blend, served hot with fresh disc bread.",
+          "Halloumi cooked with pesto in the special WZZAB blend, served hot with fresh disc bread.",
         price: { amount: 34, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/halloumi-hamsah.webp",
       },
       {
         id: "beet-avocado-sourdough",
@@ -116,6 +126,7 @@ export const menuEn: Menu = [
           "Naturally leavened sourdough topped with avocado, spiced beetroot and assorted cheeses.",
         price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/beet-avocado-sourdough.webp",
       },
       {
         id: "makdous-scramble-croissant",
@@ -124,6 +135,7 @@ export const menuEn: Menu = [
           "A buttery croissant filled with creamy scrambled eggs and our special makdous blend.",
         price: { amount: 36, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/makdous-scramble-croissant.webp",
       },
       {
         id: "tuna-danish",
@@ -131,6 +143,7 @@ export const menuEn: Menu = [
         description:
           "A golden, flaky danish filled with a rich, creamy tuna blend, served with crispy potato chips.",
         price: { amount: 34, currency: "SAR" },
+        image: "/menu/tuna-danish.webp",
       },
     ],
   },
@@ -147,6 +160,7 @@ export const menuEn: Menu = [
         price: { amount: 18, currency: "SAR" },
         calories: 567,
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "halloumi-pesto-pizza-disc",
@@ -154,6 +168,7 @@ export const menuEn: Menu = [
         description: "A fresh-baked disc, pizza style, topped with halloumi and pesto.",
         price: { amount: 27, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/halloumi-pesto-pizza-disc.webp",
       },
       {
         id: "halloumi-pesto-flatbread",
@@ -161,12 +176,14 @@ export const menuEn: Menu = [
         description: "Fresh flatbread filled with halloumi and pesto.",
         price: { amount: 39, currency: "SAR" },
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "sambousa-disc",
         name: "Sambousa Disc",
         description: "Fresh-baked disc bread with a sambousa filling.",
         price: { amount: 23, currency: "SAR" },
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "smoked-cheese-disc",
@@ -176,6 +193,7 @@ export const menuEn: Menu = [
         price: { amount: 22, currency: "SAR" },
         calories: 588,
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "egg-cheese-disc",
@@ -185,18 +203,21 @@ export const menuEn: Menu = [
         price: { amount: 23, currency: "SAR" },
         calories: 419,
         badges: ["vegetarian"],
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "liver-cheese-disc",
         name: "Liver & Cheese Disc",
         price: { amount: 25, currency: "SAR" },
         calories: 190,
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "tuna-olive-disc",
         name: "Tuna & Olive Disc",
         price: { amount: 24, currency: "SAR" },
         calories: 200,
+        image: "/menu/disc-bread-generic.webp",
       },
     ],
   },
@@ -255,6 +276,7 @@ export const menuEn: Menu = [
         name: "WZZAB Baklava Box",
         price: { amount: 47, currency: "SAR" },
         calories: 1400,
+        image: "/menu/baklava-box.webp",
       },
       {
         id: "pistachio-baklava",
@@ -265,6 +287,7 @@ export const menuEn: Menu = [
         id: "pistachio-baklava-box",
         name: "Pistachio Baklava Box",
         price: { amount: 47, currency: "SAR" },
+        image: "/menu/pistachio-baklava-box.webp",
       },
       {
         id: "baklava-ice-cream",
@@ -281,12 +304,14 @@ export const menuEn: Menu = [
         id: "truffle-mango",
         name: "Truffle Mango",
         price: { amount: 28, currency: "SAR" },
+        image: "/menu/truffle-mango.webp",
       },
       {
         id: "coconut-mango",
         name: "Coconut Mango",
         price: { amount: 28, currency: "SAR" },
         calories: 300,
+        image: "/menu/coconut-mango.webp",
       },
       {
         id: "cheesecake-brownies",
@@ -298,6 +323,7 @@ export const menuEn: Menu = [
         id: "pecan-tiramisu",
         name: "Pecan Tiramisu",
         price: { amount: 28, currency: "SAR" },
+        image: "/menu/pecan-tiramisu.webp",
       },
       {
         id: "trambello-vanilla",
@@ -345,6 +371,7 @@ export const menuEn: Menu = [
         description: "Basil, zap, mint, mixed.",
         price: { amount: 30, currency: "SAR" },
         calories: 30,
+        image: "/menu/tea-pot.webp",
       },
       {
         id: "leaf-tea-cup",
@@ -385,6 +412,7 @@ export const menuEn: Menu = [
         description: "Served with dates and tahini.",
         price: { amount: 33, currency: "SAR" },
         calories: 20,
+        image: "/menu/saudi-coffee-pot.webp",
       },
       {
         id: "saudi-coffee-cup",
@@ -447,24 +475,28 @@ export const menuEn: Menu = [
         name: "Ethiopian Cold V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
+        image: "/menu/cold-v60.webp",
       },
       {
         id: "ethiopian-hot-v60",
         name: "Ethiopian Hot V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
+        image: "/menu/hot-v60.webp",
       },
       {
         id: "colombian-cold-v60",
         name: "Colombian Cold V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
+        image: "/menu/cold-v60.webp",
       },
       {
         id: "colombian-hot-v60",
         name: "Colombian Hot V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
+        image: "/menu/hot-v60.webp",
       },
       {
         id: "luxury-crop-cold-v60",
@@ -478,13 +510,20 @@ export const menuEn: Menu = [
         price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
-      { id: "latte", name: "Latte", price: { amount: 16, currency: "SAR" }, calories: 100 },
+      {
+        id: "latte",
+        name: "Latte",
+        price: { amount: 16, currency: "SAR" },
+        calories: 100,
+        image: "/menu/latte.webp",
+      },
       { id: "ice-latte", name: "Ice Latte", price: { amount: 17, currency: "SAR" }, calories: 88 },
       {
         id: "cappuccino",
         name: "Cappuccino",
         price: { amount: 16, currency: "SAR" },
         calories: 90,
+        image: "/menu/cappuccino.webp",
       },
       {
         id: "flat-white",
@@ -549,6 +588,7 @@ export const menuEn: Menu = [
         price: { amount: 17, currency: "SAR" },
         calories: 20,
         badges: ["vegan"],
+        image: "/menu/cold-hibiscus.webp",
       },
       {
         id: "ice-tea",
@@ -559,6 +599,7 @@ export const menuEn: Menu = [
         id: "alfreedo",
         name: "Alfreedo",
         price: { amount: 16, currency: "SAR" },
+        image: "/menu/alfreedo.webp",
       },
     ],
   },
