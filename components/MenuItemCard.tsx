@@ -1,10 +1,9 @@
-import Image from "next/image";
-
 import { SHOW_CALORIES, SHOW_PRICES } from "@/lib/config";
 import { formatCalories, formatPrice, getDictionary } from "@/lib/i18n";
 import type { Locale, MenuItem } from "@/lib/types";
 
 import { Badge } from "./Badge";
+import { MenuItemImage } from "./MenuItemImage";
 
 interface MenuItemCardProps {
   item: MenuItem;
@@ -31,28 +30,22 @@ export function MenuItemCard({ item, locale }: MenuItemCardProps) {
         unavailable ? "opacity-55" : "",
       ].join(" ")}
     >
-      {item.image ? (
-        <Image
-          src={item.image}
-          alt=""
-          width={96}
-          height={96}
-          sizes="96px"
-          loading="lazy"
-          className="size-20 shrink-0 rounded-lg object-cover sm:size-24"
-        />
-      ) : null}
+      {item.image ? <MenuItemImage src={item.image} name={item.name} locale={locale} /> : null}
 
       <div className="min-w-0 flex-1">
-        <div className="flex items-baseline gap-2">
+        {/* flex-wrap so a long dish name and its price/leader move as one unit onto a
+            second line, rather than the leader's align-self:end splitting it away from
+            the price when the name itself wraps (a real bug the bigger photo exposed by
+            leaving less horizontal room on narrow screens). */}
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
           <h3 className="text-h4 font-semibold">{item.name}</h3>
           {showPrice ? (
-            <>
+            <span className="flex flex-1 items-baseline gap-2">
               <span aria-hidden className="menu-leader" />
               <p className="shrink-0 font-semibold tabular-nums">
                 {formatPrice(locale, item.price!)}
               </p>
-            </>
+            </span>
           ) : null}
         </div>
 

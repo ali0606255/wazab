@@ -45,6 +45,8 @@ const dictionaries = {
     notFoundTitle: "الصفحة غير موجودة",
     notFoundBody: "الرابط الذي فتحته غير صحيح أو تم نقل الصفحة.",
     placeholderNotice: "الأصناف والأسعار المعروضة مبدئية للعرض فقط، وسيتم اعتمادها من المطعم.",
+    enlargeImage: "اضغط لتكبير الصورة",
+    closeImage: "إغلاق الصورة",
     badges: {
       new: "جديد",
       popular: "الأكثر طلباً",
@@ -76,6 +78,8 @@ const dictionaries = {
     notFoundTitle: "Page not found",
     notFoundBody: "That link is not valid, or the page has moved.",
     placeholderNotice: "Items and prices shown are provisional placeholders pending sign-off.",
+    enlargeImage: "Tap to enlarge photo",
+    closeImage: "Close photo",
     badges: {
       new: "New",
       popular: "Popular",
