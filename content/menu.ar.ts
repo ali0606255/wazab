@@ -27,6 +27,7 @@ export const menuAr: Menu = [
         description: "عريكة فاخرة بالعسل والسمن، تُقدّم بطريقة وزّاب الخاصة والمميّزة.",
         price: { amount: 29, currency: "SAR" },
         calories: 251,
+        image: "/menu/areekah.webp",
       },
       {
         id: "local-meat",

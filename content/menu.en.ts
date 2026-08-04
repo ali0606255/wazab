@@ -27,6 +27,7 @@ export const menuEn: Menu = [
         description: "Premium areekah with honey and ghee, served the signature WZZAB way.",
         price: { amount: 29, currency: "SAR" },
         calories: 251,
+        image: "/menu/areekah.webp",
       },
       {
         id: "local-meat",
