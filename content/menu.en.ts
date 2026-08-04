@@ -41,7 +41,7 @@ export const menuEn: Menu = [
         name: "WZZAB Classic Foul",
         description:
           "White fava beans in pure olive oil, prepared the signature WZZAB way, served with fresh disc bread.",
-        price: { amount: 19, currency: "SAR" },
+        price: { amount: 21, currency: "SAR" },
         calories: 210,
         badges: ["vegan"],
       },
@@ -157,7 +157,7 @@ export const menuEn: Menu = [
         name: "Cheese Stuffed Bread",
         description:
           "Prepared with local ancestral dough using natural leavening, oven-baked and served with a cheese filling.",
-        price: { amount: 18, currency: "SAR" },
+        price: { amount: 19, currency: "SAR" },
         calories: 567,
         badges: ["vegetarian"],
         image: "/menu/disc-bread-generic.webp",
@@ -314,36 +314,20 @@ export const menuEn: Menu = [
         image: "/menu/coconut-mango.webp",
       },
       {
-        id: "cheesecake-brownies",
-        name: "Cheesecake Brownies",
-        price: { amount: 28, currency: "SAR" },
-        calories: 705,
-      },
-      {
         id: "pecan-tiramisu",
         name: "Pecan Tiramisu",
         price: { amount: 28, currency: "SAR" },
         image: "/menu/pecan-tiramisu.webp",
       },
       {
-        id: "trambello-vanilla",
-        name: "Trambello Vanilla",
-        price: { amount: 22, currency: "SAR" },
+        id: "chocolate-cake",
+        name: "Chocolate Cake",
+        price: { amount: 29, currency: "SAR" },
       },
       {
-        id: "trambello-berry",
-        name: "Trambello Berry",
-        price: { amount: 22, currency: "SAR" },
-      },
-      {
-        id: "kunafa",
-        name: "Kunafa",
-        price: { amount: 19, currency: "SAR" },
-      },
-      {
-        id: "oshbulbul",
-        name: "Oshbulbul",
-        price: { amount: 18, currency: "SAR" },
+        id: "san-sebastian-cheesecake",
+        name: "San Sebastian Cheesecake",
+        price: { amount: 29, currency: "SAR" },
       },
       {
         id: "date-maamoul",
@@ -455,7 +439,7 @@ export const menuEn: Menu = [
       },
       {
         id: "daffi",
-        name: "Daffi",
+        name: "Daffi (Karak)",
         price: { amount: 9, currency: "SAR" },
       },
       {
@@ -463,6 +447,11 @@ export const menuEn: Menu = [
         name: "Premium Saudi Coffee Beans",
         description: "Premium Saudi coffee beans, packaged to brew at home.",
         price: { amount: 55, currency: "SAR" },
+      },
+      {
+        id: "shisha-table",
+        name: "Shisha Table (1.5 Hours)",
+        price: { amount: 20, currency: "SAR" },
       },
     ],
   },

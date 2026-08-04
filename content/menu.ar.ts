@@ -41,7 +41,7 @@ export const menuAr: Menu = [
         name: "فول وزّاب الكلاسيك",
         description:
           "فول أبيض بزيت الزيتون النقي، محضّر على طريقة وزّاب الخاصة، ويُقدّم مع القرص الطازج.",
-        price: { amount: 19, currency: "SAR" },
+        price: { amount: 21, currency: "SAR" },
         calories: 210,
         badges: ["vegan"],
       },
@@ -154,7 +154,7 @@ export const menuAr: Menu = [
         name: "قرص خبز بحشوة الأجبان",
         description:
           "يُحضّر من عجينة الأجداد المحلية بالتخمير الطبيعي، ويُخبز بالفرن ويُقدّم بحشوة الأجبان.",
-        price: { amount: 18, currency: "SAR" },
+        price: { amount: 19, currency: "SAR" },
         calories: 567,
         badges: ["vegetarian"],
         image: "/menu/disc-bread-generic.webp",
@@ -311,36 +311,20 @@ export const menuAr: Menu = [
         image: "/menu/coconut-mango.webp",
       },
       {
-        id: "cheesecake-brownies",
-        name: "تشيز براونيز",
-        price: { amount: 28, currency: "SAR" },
-        calories: 705,
-      },
-      {
         id: "pecan-tiramisu",
         name: "تراميسو بيكان",
         price: { amount: 28, currency: "SAR" },
         image: "/menu/pecan-tiramisu.webp",
       },
       {
-        id: "trambello-vanilla",
-        name: "ترامبيلو فانيلا",
-        price: { amount: 22, currency: "SAR" },
+        id: "chocolate-cake",
+        name: "تشوكلت كيك",
+        price: { amount: 29, currency: "SAR" },
       },
       {
-        id: "trambello-berry",
-        name: "ترامبيلو توت",
-        price: { amount: 22, currency: "SAR" },
-      },
-      {
-        id: "kunafa",
-        name: "كنافة",
-        price: { amount: 19, currency: "SAR" },
-      },
-      {
-        id: "oshbulbul",
-        name: "عش بلبل",
-        price: { amount: 18, currency: "SAR" },
+        id: "san-sebastian-cheesecake",
+        name: "سان سيباستيان تشيزكيك",
+        price: { amount: 29, currency: "SAR" },
       },
       {
         id: "date-maamoul",
@@ -452,7 +436,7 @@ export const menuAr: Menu = [
       },
       {
         id: "daffi",
-        name: "دافي",
+        name: "دافي (كرك)",
         price: { amount: 9, currency: "SAR" },
       },
       {
@@ -460,6 +444,11 @@ export const menuAr: Menu = [
         name: "بن سعودي فاخر",
         description: "حبوب قهوة سعودية فاخرة، معبأة لتُحضَّر في المنزل.",
         price: { amount: 55, currency: "SAR" },
+      },
+      {
+        id: "shisha-table",
+        name: "طاولة شيشة (ساعة ونصف)",
+        price: { amount: 20, currency: "SAR" },
       },
     ],
   },
