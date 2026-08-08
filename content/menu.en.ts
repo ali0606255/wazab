@@ -167,7 +167,7 @@ export const menuEn: Menu = [
         description: "A fresh-baked disc, pizza style, topped with halloumi and pesto.",
         price: { amount: 27, currency: "SAR" },
         badges: ["vegetarian"],
-        image: "/menu/halloumi-pesto-pizza-disc.webp",
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "halloumi-pesto-flatbread",
@@ -175,7 +175,7 @@ export const menuEn: Menu = [
         description: "Fresh flatbread filled with halloumi and pesto.",
         price: { amount: 43, currency: "SAR" },
         badges: ["vegetarian"],
-        image: "/menu/disc-bread-generic.webp",
+        image: "/menu/halloumi-pesto-pizza-disc.webp",
       },
       {
         id: "sambousa-disc",

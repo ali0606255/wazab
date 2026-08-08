@@ -164,7 +164,7 @@ export const menuAr: Menu = [
         description: "قرص مخبوز طازجاً بطريقة البيتزا، بحشوة الحلوم والبيستو.",
         price: { amount: 27, currency: "SAR" },
         badges: ["vegetarian"],
-        image: "/menu/halloumi-pesto-pizza-disc.webp",
+        image: "/menu/disc-bread-generic.webp",
       },
       {
         id: "halloumi-pesto-flatbread",
@@ -172,7 +172,7 @@ export const menuAr: Menu = [
         description: "خبز مسطّح طازج بحشوة الحلوم والبيستو.",
         price: { amount: 43, currency: "SAR" },
         badges: ["vegetarian"],
-        image: "/menu/disc-bread-generic.webp",
+        image: "/menu/halloumi-pesto-pizza-disc.webp",
       },
       {
         id: "sambousa-disc",
