@@ -82,15 +82,7 @@ export const menuAr: Menu = [
           "أومليت مخملي بالزبدة، محشو بمزيج غني من الأجبان، ويُقدّم مع سلطة ورقيات طازجة.",
         price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
-      },
-      {
-        id: "arugula-salad",
-        name: "سلطة الجرجير",
-        description:
-          "جرجير طازج مع شرائح التفاح والخس والرمان والجوز المحمّص وجبن الفيتا والتتبيلة الخاصة.",
-        price: { amount: 33, currency: "SAR" },
-        badges: ["vegetarian"],
-        image: "/menu/arugula-salad.webp",
+        image: "/menu/butter-cheese-omelette.webp",
       },
       {
         id: "truffle-scrambled-eggs",
@@ -103,12 +95,18 @@ export const menuAr: Menu = [
       },
       {
         id: "green-shakshuka",
-        name: "طاوة الشكشوكة الخضراء",
+        name: "شكشوكة خضراء",
         description:
           "بيض بصلصة خضراء غنية بالأعشاب العطرية، يعلوها جبن الموزاريلا، وتُقدّم مع القرص.",
         price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
         image: "/menu/green-shakshuka.webp",
+      },
+      {
+        id: "truffle-parmesan-fries",
+        name: "بطاطس بالترافل وجبنة البارميزان",
+        price: { amount: 23, currency: "SAR" },
+        image: "/menu/truffle-parmesan-fries.webp",
       },
       {
         id: "halloumi-hamsah",
@@ -172,7 +170,7 @@ export const menuAr: Menu = [
         id: "halloumi-pesto-flatbread",
         name: "فلات الحلوم والبيستو",
         description: "خبز مسطّح طازج بحشوة الحلوم والبيستو.",
-        price: { amount: 39, currency: "SAR" },
+        price: { amount: 43, currency: "SAR" },
         badges: ["vegetarian"],
         image: "/menu/disc-bread-generic.webp",
       },
@@ -437,7 +435,7 @@ export const menuAr: Menu = [
       },
       {
         id: "daffi",
-        name: "دافي (كرك)",
+        name: "كرك",
         price: { amount: 9, currency: "SAR" },
       },
       {
@@ -448,7 +446,7 @@ export const menuAr: Menu = [
       },
       {
         id: "shisha-table",
-        name: "طاولة شيشة (ساعة ونصف)",
+        name: "تشغيل شيشة نار لمدة ساعة ونصف",
         price: { amount: 20, currency: "SAR" },
       },
     ],

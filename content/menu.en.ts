@@ -83,15 +83,7 @@ export const menuEn: Menu = [
           "A velvety butter omelette filled with a rich cheese blend, served with a fresh leaf salad.",
         price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
-      },
-      {
-        id: "arugula-salad",
-        name: "Arugula Salad",
-        description:
-          "Fresh arugula with apple slices, lettuce, pomegranate, toasted walnuts, feta and our special dressing.",
-        price: { amount: 33, currency: "SAR" },
-        badges: ["vegetarian"],
-        image: "/menu/arugula-salad.webp",
+        image: "/menu/butter-cheese-omelette.webp",
       },
       {
         id: "truffle-scrambled-eggs",
@@ -104,12 +96,18 @@ export const menuEn: Menu = [
       },
       {
         id: "green-shakshuka",
-        name: "Green Shakshuka Pan",
+        name: "Green Shakshuka",
         description:
           "Eggs in a herb-rich green sauce topped with mozzarella, served with disc bread.",
         price: { amount: 29, currency: "SAR" },
         badges: ["vegetarian"],
         image: "/menu/green-shakshuka.webp",
+      },
+      {
+        id: "truffle-parmesan-fries",
+        name: "Truffle & Parmesan Fries",
+        price: { amount: 23, currency: "SAR" },
+        image: "/menu/truffle-parmesan-fries.webp",
       },
       {
         id: "halloumi-hamsah",
@@ -175,7 +173,7 @@ export const menuEn: Menu = [
         id: "halloumi-pesto-flatbread",
         name: "Halloumi & Pesto Flatbread",
         description: "Fresh flatbread filled with halloumi and pesto.",
-        price: { amount: 39, currency: "SAR" },
+        price: { amount: 43, currency: "SAR" },
         badges: ["vegetarian"],
         image: "/menu/disc-bread-generic.webp",
       },
@@ -440,7 +438,7 @@ export const menuEn: Menu = [
       },
       {
         id: "daffi",
-        name: "Daffi (Karak)",
+        name: "Karak",
         price: { amount: 9, currency: "SAR" },
       },
       {
@@ -451,7 +449,7 @@ export const menuEn: Menu = [
       },
       {
         id: "shisha-table",
-        name: "Shisha Table (1.5 Hours)",
+        name: "Shisha Session (1.5 Hours)",
         price: { amount: 20, currency: "SAR" },
       },
     ],
