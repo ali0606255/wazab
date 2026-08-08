@@ -95,7 +95,7 @@ export const menuAr: Menu = [
       },
       {
         id: "green-shakshuka",
-        name: "شكشوكة خضراء",
+        name: "شكشوكة جرين",
         description:
           "بيض بصلصة خضراء غنية بالأعشاب العطرية، يعلوها جبن الموزاريلا، وتُقدّم مع القرص.",
         price: { amount: 29, currency: "SAR" },
@@ -446,7 +446,7 @@ export const menuAr: Menu = [
       },
       {
         id: "shisha-table",
-        name: "تشغيل شيشة نار لمدة ساعة ونصف",
+        name: "تشغيل شبة نار لمدة ساعة ونصف",
         price: { amount: 20, currency: "SAR" },
       },
     ],
