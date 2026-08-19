@@ -1,4 +1,4 @@
-import { getSiteCopy, site } from "@/content/site";
+import { getSiteCopy } from "@/content/site";
 import { getDictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 
@@ -32,33 +32,11 @@ export function Footer({ locale }: FooterProps) {
           </div>
         </dl>
 
-        <ul className="text-caption mt-6 flex flex-wrap gap-x-6 gap-y-2">
-          <li>
-            <a
-              href={`tel:${site.contact.phone}`}
-              dir="ltr"
-              className="text-canvas/80 hover:text-canvas inline-flex min-h-11 items-center underline-offset-4 transition-colors hover:underline"
-            >
-              {site.contact.phone}
-            </a>
-          </li>
-          <li>
-            <a
-              href={site.contact.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-canvas/80 hover:text-canvas inline-flex min-h-11 items-center underline-offset-4 transition-colors hover:underline"
-            >
-              Instagram
-            </a>
-          </li>
-        </ul>
+        <SpotCredit siteByLabel={t.siteBy} contactLabel={t.spotContactUs} />
 
         <p className="text-caption text-canvas/45 mt-10">
           © {year} {copy.name} — {copy.rights}
         </p>
-
-        <SpotCredit siteByLabel={t.siteBy} contactLabel={t.spotContactUs} />
       </div>
     </footer>
   );

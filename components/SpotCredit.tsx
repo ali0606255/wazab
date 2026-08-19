@@ -18,28 +18,22 @@ interface SpotCreditProps {
 
 export function SpotCredit({ siteByLabel, contactLabel }: SpotCreditProps) {
   return (
-    <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
+    <div className="text-caption mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
       <a
         href="https://spotsa.app"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-canvas/50 hover:text-canvas/85 inline-flex min-h-11 items-center gap-2 text-[0.8125rem] transition-colors"
+        className="text-canvas/80 hover:text-canvas inline-flex min-h-11 items-center gap-2 transition-colors"
       >
         <span>{siteByLabel}</span>
         <span className="inline-flex items-center gap-1.5">
-          <Image
-            src="/brand/spot-icon.webp"
-            alt=""
-            width={22}
-            height={22}
-            className="size-[22px]"
-          />
+          <Image src="/brand/spot-icon.webp" alt="" width={24} height={24} className="size-6" />
           <Image
             src="/brand/spot-wordmark.webp"
             alt="spot"
-            width={44}
-            height={17}
-            className="h-[17px] w-auto"
+            width={52}
+            height={20}
+            className="h-5 w-auto"
           />
         </span>
       </a>
@@ -48,7 +42,7 @@ export function SpotCredit({ siteByLabel, contactLabel }: SpotCreditProps) {
         href="https://spotsa.app"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-caption inline-flex min-h-11 items-center rounded-full px-5 font-semibold text-white transition-opacity hover:opacity-90"
+        className="inline-flex min-h-11 items-center rounded-full px-5 font-semibold text-white transition-opacity hover:opacity-90"
         style={{ backgroundColor: SPOT_ORANGE }}
       >
         {contactLabel}
