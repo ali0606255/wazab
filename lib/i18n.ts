@@ -47,6 +47,7 @@ const dictionaries = {
     placeholderNotice: "الأصناف والأسعار المعروضة مبدئية للعرض فقط، وسيتم اعتمادها من المطعم.",
     enlargeImage: "اضغط لتكبير الصورة",
     closeImage: "إغلاق الصورة",
+    siteBy: "الموقع من",
     badges: {
       new: "جديد",
       popular: "الأكثر طلباً",
@@ -80,6 +81,7 @@ const dictionaries = {
     placeholderNotice: "Items and prices shown are provisional placeholders pending sign-off.",
     enlargeImage: "Tap to enlarge photo",
     closeImage: "Close photo",
+    siteBy: "Site by",
     badges: {
       new: "New",
       popular: "Popular",

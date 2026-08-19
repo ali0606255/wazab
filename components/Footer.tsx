@@ -1,7 +1,9 @@
 import { getSiteCopy, site } from "@/content/site";
+import { getDictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 
 import { BrandMark } from "./BrandMark";
+import { SpotCredit } from "./SpotCredit";
 
 interface FooterProps {
   locale: Locale;
@@ -9,6 +11,7 @@ interface FooterProps {
 
 export function Footer({ locale }: FooterProps) {
   const copy = getSiteCopy(locale);
+  const t = getDictionary(locale);
   const year = new Date().getFullYear();
 
   return (
@@ -54,6 +57,8 @@ export function Footer({ locale }: FooterProps) {
         <p className="text-caption text-canvas/45 mt-10">
           © {year} {copy.name} — {copy.rights}
         </p>
+
+        <SpotCredit label={t.siteBy} />
       </div>
     </footer>
   );
