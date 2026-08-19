@@ -48,6 +48,7 @@ const dictionaries = {
     enlargeImage: "اضغط لتكبير الصورة",
     closeImage: "إغلاق الصورة",
     siteBy: "الموقع من",
+    spotContactUs: "تواصل معنا",
     badges: {
       new: "جديد",
       popular: "الأكثر طلباً",
@@ -82,6 +83,7 @@ const dictionaries = {
     enlargeImage: "Tap to enlarge photo",
     closeImage: "Close photo",
     siteBy: "Site by",
+    spotContactUs: "Contact Us",
     badges: {
       new: "New",
       popular: "Popular",

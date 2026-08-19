@@ -58,7 +58,7 @@ export function Footer({ locale }: FooterProps) {
           © {year} {copy.name} — {copy.rights}
         </p>
 
-        <SpotCredit label={t.siteBy} />
+        <SpotCredit siteByLabel={t.siteBy} contactLabel={t.spotContactUs} />
       </div>
     </footer>
   );
