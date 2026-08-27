@@ -364,6 +364,7 @@ export const menuAr: Menu = [
   },
   {
     id: "hot-beverages",
+    branchOrder: { "branch-2": 1 },
     name: "الشاي والقهوة السعودية",
     items: [
       {

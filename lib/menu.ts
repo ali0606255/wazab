@@ -23,28 +23,36 @@ const SOURCES: Record<Locale, Menu> = {
 };
 
 /**
+ * Sorts by `branchOrder[branch]` (lower first); entries with no value for this branch
+ * keep their normal relative order, placed after the ones that have one.
+ */
+function byBranchOrder<T extends { branchOrder?: Record<string, number> }>(branch: Branch) {
+  return (a: T, b: T) =>
+    (a.branchOrder?.[branch] ?? Infinity) - (b.branchOrder?.[branch] ?? Infinity);
+}
+
+/**
  * The whole menu for a locale, filtered to one branch and categories in presentation
- * order. Items tagged with `excludeFrom: [branch]` are dropped; a category left with no
- * items is dropped too, so a branch never shows an empty section header.
+ * order. Items (and categories) tagged with `excludeFrom: [branch]` are dropped; a
+ * category left with no items is dropped too, so a branch never shows an empty section
+ * header.
  *
- * The main branch always keeps file order. A non-main branch honours `branchOrder`: an
- * item with an entry for this branch moves to that position (lower first); everything
- * else keeps its normal relative order, placed after the ordered items.
+ * The main branch always keeps file order. A non-main branch additionally honours
+ * `branchOrder` on both categories and items — see byBranchOrder above.
  */
 export async function getMenu(locale: Locale, branch: Branch = DEFAULT_BRANCH): Promise<Menu> {
-  return SOURCES[locale]
+  const categories = SOURCES[locale]
     .map((category) => {
       const items = category.items.filter((item) => !item.excludeFrom?.includes(branch));
-
-      if (branch !== DEFAULT_BRANCH) {
-        items.sort(
-          (a, b) => (a.branchOrder?.[branch] ?? Infinity) - (b.branchOrder?.[branch] ?? Infinity),
-        );
-      }
+      if (branch !== DEFAULT_BRANCH) items.sort(byBranchOrder(branch));
 
       return { ...category, items };
     })
     .filter((category) => category.items.length > 0);
+
+  if (branch !== DEFAULT_BRANCH) categories.sort(byBranchOrder(branch));
+
+  return categories;
 }
 
 /** Category ids in menu order — used for static generation and the category rail. */

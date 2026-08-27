@@ -367,6 +367,7 @@ export const menuEn: Menu = [
   },
   {
     id: "hot-beverages",
+    branchOrder: { "branch-2": 1 },
     name: "Tea & Saudi Coffee",
     items: [
       {

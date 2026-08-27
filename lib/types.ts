@@ -40,6 +40,8 @@ export interface MenuCategory {
   name: string;
   description?: string;
   items: MenuItem[];
+  /** Per-branch display order, same rules as MenuItem.branchOrder but for categories. */
+  branchOrder?: Record<string, number>;
 }
 
 /**
