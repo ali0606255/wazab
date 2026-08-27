@@ -22,8 +22,8 @@ interface SiteCopy {
 }
 
 export const site = {
-  /** Production origin — update once the domain is live, then redeploy. */
-  url: "https://wzzab.vercel.app",
+  /** Production origin — update once a custom domain is live, then redeploy. */
+  url: "https://wazab-nu.vercel.app",
 
   contact: {
     phone: "+966500000000", // TODO: confirm with client
