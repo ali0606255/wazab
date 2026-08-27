@@ -187,6 +187,7 @@ export const menuEn: Menu = [
       },
       {
         id: "halloumi-pesto-flatbread",
+        excludeFrom: ["branch-2"],
         name: "Halloumi & Pesto Flatbread",
         description: "Fresh flatbread filled with halloumi and pesto.",
         price: { amount: 43, currency: "SAR" },
