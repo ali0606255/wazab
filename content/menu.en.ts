@@ -67,6 +67,7 @@ export const menuEn: Menu = [
     items: [
       {
         id: "creamy-chicken-cube",
+        excludeFrom: ["branch-2"],
         name: "Creamy Chicken Cube",
         description: "Tender chicken in a rich cream sauce inside a butter-toasted brioche cube.",
         price: { amount: 41, currency: "SAR" },
@@ -74,6 +75,7 @@ export const menuEn: Menu = [
       },
       {
         id: "eggplant-potato-fatteh",
+        excludeFrom: ["branch-2"],
         name: "Eggplant & Potato Fatteh",
         description:
           "Layers of eggplant, potato, lettuce and creamy sauce, crowned with a golden crunch.",
@@ -83,6 +85,7 @@ export const menuEn: Menu = [
       },
       {
         id: "butter-cheese-omelette",
+        excludeFrom: ["branch-2"],
         name: "Butter & Cheese Omelette",
         description:
           "A velvety butter omelette filled with a rich cheese blend, served with a fresh leaf salad.",
@@ -92,6 +95,7 @@ export const menuEn: Menu = [
       },
       {
         id: "truffle-scrambled-eggs",
+        excludeFrom: ["branch-2"],
         name: "Truffle Scrambled Eggs",
         description:
           "Toasted brioche topped with creamy truffle scrambled eggs, mushroom sauce and parmesan.",
@@ -101,6 +105,7 @@ export const menuEn: Menu = [
       },
       {
         id: "green-shakshuka",
+        excludeFrom: ["branch-2"],
         name: "Green Shakshuka",
         description:
           "Eggs in a herb-rich green sauce topped with mozzarella, served with disc bread.",
@@ -110,12 +115,14 @@ export const menuEn: Menu = [
       },
       {
         id: "truffle-parmesan-fries",
+        excludeFrom: ["branch-2"],
         name: "Truffle & Parmesan Fries",
         price: { amount: 23, currency: "SAR" },
         image: "/menu/truffle-parmesan-fries.webp",
       },
       {
         id: "halloumi-hamsah",
+        excludeFrom: ["branch-2"],
         name: "Halloumi Hamsah with Pesto",
         description:
           "Halloumi cooked with pesto in the special WZZAB blend, served hot with fresh disc bread.",
@@ -125,6 +132,7 @@ export const menuEn: Menu = [
       },
       {
         id: "beet-avocado-sourdough",
+        excludeFrom: ["branch-2"],
         name: "Beet & Avocado Sourdough",
         description:
           "Naturally leavened sourdough topped with avocado, spiced beetroot and assorted cheeses.",
@@ -134,6 +142,7 @@ export const menuEn: Menu = [
       },
       {
         id: "makdous-scramble-croissant",
+        excludeFrom: ["branch-2"],
         name: "Makdous Scramble Croissant",
         description:
           "A buttery croissant filled with creamy scrambled eggs and our special makdous blend.",
@@ -143,6 +152,7 @@ export const menuEn: Menu = [
       },
       {
         id: "tuna-danish",
+        excludeFrom: ["branch-2"],
         name: "Flaky Tuna Danish",
         description:
           "A golden, flaky danish filled with a rich, creamy tuna blend, served with crispy potato chips.",

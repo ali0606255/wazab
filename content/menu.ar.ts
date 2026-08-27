@@ -67,6 +67,7 @@ export const menuAr: Menu = [
     items: [
       {
         id: "creamy-chicken-cube",
+        excludeFrom: ["branch-2"],
         name: "كيوب الدجاج بالكريمة",
         description: "قطع دجاج طرية مطهوة بالكريمة الغنية داخل مكعب بريوش محمّص بالزبدة.",
         price: { amount: 41, currency: "SAR" },
@@ -74,6 +75,7 @@ export const menuAr: Menu = [
       },
       {
         id: "eggplant-potato-fatteh",
+        excludeFrom: ["branch-2"],
         name: "فتة الباذنجان والبطاطس",
         description: "طبقات من الباذنجان والبطاطا والخس والصوص الكريمي، تتوّج بقرمشة ذهبية.",
         price: { amount: 37, currency: "SAR" },
@@ -82,6 +84,7 @@ export const menuAr: Menu = [
       },
       {
         id: "butter-cheese-omelette",
+        excludeFrom: ["branch-2"],
         name: "أومليت الزبدة والأجبان",
         description:
           "أومليت مخملي بالزبدة، محشو بمزيج غني من الأجبان، ويُقدّم مع سلطة ورقيات طازجة.",
@@ -91,6 +94,7 @@ export const menuAr: Menu = [
       },
       {
         id: "truffle-scrambled-eggs",
+        excludeFrom: ["branch-2"],
         name: "سكرامبل البيض بالترافل",
         description:
           "بريوش محمّص يعلوه بيض سكرامبل كريمي بنكهة الترافل مع صوص المشروم والبارميزان.",
@@ -100,6 +104,7 @@ export const menuAr: Menu = [
       },
       {
         id: "green-shakshuka",
+        excludeFrom: ["branch-2"],
         name: "شكشوكة جرين",
         description:
           "بيض بصلصة خضراء غنية بالأعشاب العطرية، يعلوها جبن الموزاريلا، وتُقدّم مع القرص.",
@@ -109,12 +114,14 @@ export const menuAr: Menu = [
       },
       {
         id: "truffle-parmesan-fries",
+        excludeFrom: ["branch-2"],
         name: "بطاطس بالترافل وجبنة البارميزان",
         price: { amount: 23, currency: "SAR" },
         image: "/menu/truffle-parmesan-fries.webp",
       },
       {
         id: "halloumi-hamsah",
+        excludeFrom: ["branch-2"],
         name: "حمسة حلوم بالبيستو",
         description:
           "قطع حلوم مطهوة مع البيستو بخلطة وزّاب الخاصة، تُقدّم ساخنة مع قرص وزّاب الطازج.",
@@ -124,6 +131,7 @@ export const menuAr: Menu = [
       },
       {
         id: "beet-avocado-sourdough",
+        excludeFrom: ["branch-2"],
         name: "ساوردو الشمندر والأفوكادو بالأجبان",
         description:
           "خبز ساوردو بالتخمير الطبيعي، يعلوه الأفوكادو والشمندر المتبّل والأجبان المنوّعة.",
@@ -133,6 +141,7 @@ export const menuAr: Menu = [
       },
       {
         id: "makdous-scramble-croissant",
+        excludeFrom: ["branch-2"],
         name: "كرواسون سكرامبل البيض مع خلطة المكدوس",
         description: "كرواسون زبدي فاخر، محشو بسكرامبل البيض الكريمي وخلطتنا الخاصة بالمكدوس.",
         price: { amount: 36, currency: "SAR" },
@@ -141,6 +150,7 @@ export const menuAr: Menu = [
       },
       {
         id: "tuna-danish",
+        excludeFrom: ["branch-2"],
         name: "دانيش التونة الهش",
         description: "دانيش ذهبي هش، محشو بخليط تونة كريمي فاخر، ويُقدّم مع شيبس البطاطس المقرمش.",
         price: { amount: 34, currency: "SAR" },
