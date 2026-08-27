@@ -9,9 +9,11 @@ import { LocaleSwitcher } from "./LocaleSwitcher";
 
 interface HeaderProps {
   locale: Locale;
+  /** URL segment before the locale, e.g. "/branch-2" for a branch menu. Omit for main. */
+  basePath?: string;
 }
 
-export function Header({ locale }: HeaderProps) {
+export function Header({ locale, basePath = "" }: HeaderProps) {
   const copy = getSiteCopy(locale);
   const t = getDictionary(locale);
 
@@ -21,7 +23,7 @@ export function Header({ locale }: HeaderProps) {
         {/* The wordmark is the actual brand lettering (SVG), so the name in the bar
             matches the logo exactly rather than approximating it with a text font. */}
         <Link
-          href={`/${locale}`}
+          href={`${basePath}/${locale}`}
           className="flex items-center gap-2.5"
           aria-label={`${copy.name} — ${t.menu}`}
         >
@@ -34,7 +36,7 @@ export function Header({ locale }: HeaderProps) {
           </span>
         </Link>
 
-        <LocaleSwitcher locale={locale} />
+        <LocaleSwitcher locale={locale} basePath={basePath} />
       </div>
     </header>
   );

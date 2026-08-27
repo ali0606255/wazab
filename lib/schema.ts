@@ -6,16 +6,16 @@ import type { Locale, Menu } from "./types";
  * schema.org markup so search engines can surface the menu directly. Emitted as a
  * plain object and serialized by the page — see the Next.js JSON-LD guidance.
  */
-export function buildRestaurantSchema(locale: Locale, menu: Menu) {
+export function buildRestaurantSchema(locale: Locale, menu: Menu, basePath = "") {
   const copy = getSiteCopy(locale);
 
   return {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "@id": `${site.url}/${locale}#restaurant`,
+    "@id": `${site.url}${basePath}/${locale}#restaurant`,
     name: copy.name,
     description: copy.metaDescription,
-    url: `${site.url}/${locale}`,
+    url: `${site.url}${basePath}/${locale}`,
     servesCuisine: locale === "ar" ? "مخبوزات وقهوة" : "Bakery & Coffee",
     telephone: site.contact.phone,
     address: {

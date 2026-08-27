@@ -3,6 +3,7 @@ import "server-only";
 import { menuAr } from "@/content/menu.ar";
 import { menuEn } from "@/content/menu.en";
 
+import { DEFAULT_BRANCH, type Branch } from "./branches";
 import type { Locale, Menu, MenuCategory, MenuItem } from "./types";
 
 /*
@@ -21,25 +22,44 @@ const SOURCES: Record<Locale, Menu> = {
   en: menuEn,
 };
 
-/** The whole menu for a locale, categories in presentation order. */
-export async function getMenu(locale: Locale): Promise<Menu> {
-  return SOURCES[locale];
+/**
+ * The whole menu for a locale, filtered to one branch and categories in presentation
+ * order. Items tagged with `excludeFrom: [branch]` are dropped; a category left with no
+ * items is dropped too, so a branch never shows an empty section header.
+ */
+export async function getMenu(locale: Locale, branch: Branch = DEFAULT_BRANCH): Promise<Menu> {
+  return SOURCES[locale]
+    .map((category) => ({
+      ...category,
+      items: category.items.filter((item) => !item.excludeFrom?.includes(branch)),
+    }))
+    .filter((category) => category.items.length > 0);
 }
 
 /** Category ids in menu order — used for static generation and the category rail. */
-export async function getCategoryIds(locale: Locale): Promise<string[]> {
-  const menu = await getMenu(locale);
+export async function getCategoryIds(
+  locale: Locale,
+  branch: Branch = DEFAULT_BRANCH,
+): Promise<string[]> {
+  const menu = await getMenu(locale, branch);
   return menu.map((category) => category.id);
 }
 
-export async function getCategory(locale: Locale, id: string): Promise<MenuCategory | undefined> {
-  const menu = await getMenu(locale);
+export async function getCategory(
+  locale: Locale,
+  id: string,
+  branch: Branch = DEFAULT_BRANCH,
+): Promise<MenuCategory | undefined> {
+  const menu = await getMenu(locale, branch);
   return menu.find((category) => category.id === id);
 }
 
 /** Every item across every category, flattened — used by search and by JSON-LD. */
-export async function getAllItems(locale: Locale): Promise<MenuItem[]> {
-  const menu = await getMenu(locale);
+export async function getAllItems(
+  locale: Locale,
+  branch: Branch = DEFAULT_BRANCH,
+): Promise<MenuItem[]> {
+  const menu = await getMenu(locale, branch);
   return menu.flatMap((category) => category.items);
 }
 

@@ -17,12 +17,14 @@ export const menuAr: Menu = [
     items: [
       {
         id: "arabic-breakfast-platter",
+        excludeFrom: ["branch-2"],
         name: "تشكيلة فطور عربي",
         description: "تشكيلة غنية من أطباق الفطور المحلية، مثالية للمشاركة.",
         price: { amount: 64, currency: "SAR" },
       },
       {
         id: "areekah",
+        excludeFrom: ["branch-2"],
         name: "عريكة وزّاب",
         description: "عريكة فاخرة بالعسل والسمن، تُقدّم بطريقة وزّاب الخاصة والمميّزة.",
         price: { amount: 29, currency: "SAR" },
@@ -31,6 +33,7 @@ export const menuAr: Menu = [
       },
       {
         id: "local-meat",
+        excludeFrom: ["branch-2"],
         name: "لحم تيس طازج",
         description: "لحم تيس طازج، مطهو بعناية على الطريقة التقليدية المحلية الأصيلة.",
         price: { amount: 39, currency: "SAR" },
@@ -39,6 +42,7 @@ export const menuAr: Menu = [
       },
       {
         id: "classic-foul",
+        excludeFrom: ["branch-2"],
         name: "فول وزّاب الكلاسيك",
         description:
           "فول أبيض بزيت الزيتون النقي، محضّر على طريقة وزّاب الخاصة، ويُقدّم مع القرص الطازج.",
@@ -48,6 +52,7 @@ export const menuAr: Menu = [
       },
       {
         id: "mashed-fava-beans",
+        excludeFrom: ["branch-2"],
         name: "فول مكشّن",
         description: "فول مهروس بنكهة غنية، يُقدّم دافئاً مع القرص الطازج.",
         price: { amount: 23, currency: "SAR" },
@@ -160,6 +165,7 @@ export const menuAr: Menu = [
       },
       {
         id: "halloumi-pesto-pizza-disc",
+        excludeFrom: ["branch-2"],
         name: "قرص بيتزا الحلوم والبيستو",
         description: "قرص مخبوز طازجاً بطريقة البيتزا، بحشوة الحلوم والبيستو.",
         price: { amount: 27, currency: "SAR" },
@@ -183,6 +189,7 @@ export const menuAr: Menu = [
       },
       {
         id: "smoked-cheese-disc",
+        excludeFrom: ["branch-2"],
         name: "قرص خبز بالأجبان المدخنة",
         description:
           "يُحضّر من عجينة الأجداد المحلية بالتخمير الطبيعي، ويُخبز بالفرن ويُقدّم بالأجبان المدخنة والزيتون.",
@@ -193,6 +200,7 @@ export const menuAr: Menu = [
       },
       {
         id: "egg-cheese-disc",
+        excludeFrom: ["branch-2"],
         name: "قرص خبز البيض بالأجبان",
         description:
           "يُحضّر من عجينة الأجداد المحلية بالتخمير الطبيعي، ويُقدّم بالبيض المسلوق والأجبان والزيتون.",
@@ -203,6 +211,7 @@ export const menuAr: Menu = [
       },
       {
         id: "liver-cheese-disc",
+        excludeFrom: ["branch-2"],
         name: "قرص الكبدة بالجبن",
         price: { amount: 25, currency: "SAR" },
         calories: 190,
@@ -210,6 +219,7 @@ export const menuAr: Menu = [
       },
       {
         id: "tuna-olive-disc",
+        excludeFrom: ["branch-2"],
         name: "قرص التونة بالزيتون",
         price: { amount: 24, currency: "SAR" },
         calories: 200,
@@ -376,12 +386,14 @@ export const menuAr: Menu = [
       },
       {
         id: "large-mug-tea-refill",
+        excludeFrom: ["branch-2"],
         name: "إعادة تعبئة مق كبير شاي",
         price: { amount: 21, currency: "SAR" },
         calories: 25,
       },
       {
         id: "medium-mug-tea-refill",
+        excludeFrom: ["branch-2"],
         name: "إعادة تعبئة مق وسط شاي",
         price: { amount: 8, currency: "SAR" },
         calories: 25,
@@ -402,18 +414,21 @@ export const menuAr: Menu = [
       },
       {
         id: "large-saudi-coffee-refill",
+        excludeFrom: ["branch-2"],
         name: "إعادة تعبئة مق كبير قهوة سعودية",
         price: { amount: 27, currency: "SAR" },
         calories: 4,
       },
       {
         id: "medium-saudi-coffee-refill",
+        excludeFrom: ["branch-2"],
         name: "إعادة تعبئة مق وسط قهوة سعودية",
         price: { amount: 12, currency: "SAR" },
         calories: 4,
       },
       {
         id: "blue-family-mug",
+        excludeFrom: ["branch-2"],
         name: "مق عائلي أزرق مع تعبئة شاي",
         description: "حبق، وزّاب، نعناع، مخلوط — حافظ للحرارة والبرودة ساعات طويلة.",
         price: { amount: 69, currency: "SAR" },
@@ -421,6 +436,7 @@ export const menuAr: Menu = [
       },
       {
         id: "black-family-mug",
+        excludeFrom: ["branch-2"],
         name: "مق عائلي أسود مع تعبئة شاي",
         description: "حبق، وزّاب، نعناع، مخلوط — حافظ للحرارة والبرودة ساعات طويلة.",
         price: { amount: 69, currency: "SAR" },
@@ -428,6 +444,7 @@ export const menuAr: Menu = [
       },
       {
         id: "medium-mug-with-tea",
+        excludeFrom: ["branch-2"],
         name: "مق وسط مع تعبئة شاي",
         description: "حبق، وزّاب، نعناع، مخلوط — حافظ للحرارة والبرودة ساعات طويلة.",
         price: { amount: 65, currency: "SAR" },
@@ -457,6 +474,7 @@ export const menuAr: Menu = [
     items: [
       {
         id: "ethiopian-cold-v60",
+        excludeFrom: ["branch-2"],
         name: "إثيوبي بارد V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
@@ -464,6 +482,7 @@ export const menuAr: Menu = [
       },
       {
         id: "ethiopian-hot-v60",
+        excludeFrom: ["branch-2"],
         name: "إثيوبي حار V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
@@ -471,6 +490,7 @@ export const menuAr: Menu = [
       },
       {
         id: "colombian-cold-v60",
+        excludeFrom: ["branch-2"],
         name: "كولومبي بارد V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
@@ -478,6 +498,7 @@ export const menuAr: Menu = [
       },
       {
         id: "colombian-hot-v60",
+        excludeFrom: ["branch-2"],
         name: "كولومبي حار V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
@@ -485,60 +506,99 @@ export const menuAr: Menu = [
       },
       {
         id: "luxury-crop-cold-v60",
+        excludeFrom: ["branch-2"],
         name: "محصول فاخر بارد V60",
         price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       {
         id: "luxury-crop-hot-v60",
+        excludeFrom: ["branch-2"],
         name: "محصول فاخر حار V60",
         price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       {
         id: "latte",
+        excludeFrom: ["branch-2"],
         name: "لاتيه",
         price: { amount: 16, currency: "SAR" },
         calories: 100,
         image: "/menu/latte.webp",
       },
-      { id: "ice-latte", name: "آيس لاتيه", price: { amount: 17, currency: "SAR" }, calories: 88 },
+      {
+        id: "ice-latte",
+        excludeFrom: ["branch-2"],
+        name: "آيس لاتيه",
+        price: { amount: 17, currency: "SAR" },
+        calories: 88,
+      },
       {
         id: "cappuccino",
+        excludeFrom: ["branch-2"],
         name: "كابتشينو",
         price: { amount: 16, currency: "SAR" },
         calories: 90,
         image: "/menu/cappuccino.webp",
       },
-      { id: "flat-white", name: "فلات وايت", price: { amount: 15, currency: "SAR" }, calories: 40 },
-      { id: "cortado", name: "كورتادو", price: { amount: 14, currency: "SAR" }, calories: 30 },
-      { id: "macchiato", name: "مكياتو", price: { amount: 12, currency: "SAR" }, calories: 14 },
-      { id: "espresso", name: "إسبريسو", price: { amount: 11, currency: "SAR" }, calories: 5 },
+      {
+        id: "flat-white",
+        excludeFrom: ["branch-2"],
+        name: "فلات وايت",
+        price: { amount: 15, currency: "SAR" },
+        calories: 40,
+      },
+      {
+        id: "cortado",
+        excludeFrom: ["branch-2"],
+        name: "كورتادو",
+        price: { amount: 14, currency: "SAR" },
+        calories: 30,
+      },
+      {
+        id: "macchiato",
+        excludeFrom: ["branch-2"],
+        name: "مكياتو",
+        price: { amount: 12, currency: "SAR" },
+        calories: 14,
+      },
+      {
+        id: "espresso",
+        excludeFrom: ["branch-2"],
+        name: "إسبريسو",
+        price: { amount: 11, currency: "SAR" },
+        calories: 5,
+      },
       {
         id: "ice-spanish-latte",
+        excludeFrom: ["branch-2"],
         name: "آيس سبانش لاتيه",
         price: { amount: 19, currency: "SAR" },
         calories: 180,
       },
       {
         id: "spanish-latte",
+        excludeFrom: ["branch-2"],
         name: "سبانش لاتيه",
         price: { amount: 18, currency: "SAR" },
         calories: 170,
       },
       {
         id: "hot-americano",
+        excludeFrom: ["branch-2"],
         name: "أمريكانو حار",
         price: { amount: 13, currency: "SAR" },
         calories: 20,
       },
       {
         id: "ice-americano",
+        excludeFrom: ["branch-2"],
         name: "آيس أمريكانو",
         price: { amount: 14, currency: "SAR" },
       },
       {
         id: "hot-chocolate",
+        excludeFrom: ["branch-2"],
         name: "هوت شوكلت",
         price: { amount: 14, currency: "SAR" },
         calories: 30,

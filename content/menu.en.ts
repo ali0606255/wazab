@@ -17,12 +17,14 @@ export const menuEn: Menu = [
     items: [
       {
         id: "arabic-breakfast-platter",
+        excludeFrom: ["branch-2"],
         name: "Arabic Breakfast Platter",
         description: "A generous spread of local breakfast dishes, perfect for sharing.",
         price: { amount: 64, currency: "SAR" },
       },
       {
         id: "areekah",
+        excludeFrom: ["branch-2"],
         name: "WZZAB Areekah",
         description: "Premium areekah with honey and ghee, served the signature WZZAB way.",
         price: { amount: 29, currency: "SAR" },
@@ -31,6 +33,7 @@ export const menuEn: Menu = [
       },
       {
         id: "local-meat",
+        excludeFrom: ["branch-2"],
         name: "Local Goat Meat",
         description: "Fresh local goat meat, carefully cooked in the authentic local tradition.",
         price: { amount: 39, currency: "SAR" },
@@ -39,6 +42,7 @@ export const menuEn: Menu = [
       },
       {
         id: "classic-foul",
+        excludeFrom: ["branch-2"],
         name: "WZZAB Classic Foul",
         description:
           "White fava beans in pure olive oil, prepared the signature WZZAB way, served with fresh disc bread.",
@@ -48,6 +52,7 @@ export const menuEn: Menu = [
       },
       {
         id: "mashed-fava-beans",
+        excludeFrom: ["branch-2"],
         name: "Mashed Fava Beans",
         description: "Richly seasoned mashed fava beans, served warm with fresh disc bread.",
         price: { amount: 23, currency: "SAR" },
@@ -163,6 +168,7 @@ export const menuEn: Menu = [
       },
       {
         id: "halloumi-pesto-pizza-disc",
+        excludeFrom: ["branch-2"],
         name: "Halloumi & Pesto Pizza Disc",
         description: "A fresh-baked disc, pizza style, topped with halloumi and pesto.",
         price: { amount: 27, currency: "SAR" },
@@ -186,6 +192,7 @@ export const menuEn: Menu = [
       },
       {
         id: "smoked-cheese-disc",
+        excludeFrom: ["branch-2"],
         name: "Smoked Cheese Bread",
         description:
           "Prepared with our ancestors' local dough using natural fermentation, oven-baked and served with smoked cheese and olives.",
@@ -196,6 +203,7 @@ export const menuEn: Menu = [
       },
       {
         id: "egg-cheese-disc",
+        excludeFrom: ["branch-2"],
         name: "Scrambled Egg & Cheese Bread",
         description:
           "Prepared with our ancestors' local dough using natural fermentation, served with golden eggs, cheese and olives.",
@@ -206,6 +214,7 @@ export const menuEn: Menu = [
       },
       {
         id: "liver-cheese-disc",
+        excludeFrom: ["branch-2"],
         name: "Liver & Cheese Disc",
         price: { amount: 25, currency: "SAR" },
         calories: 190,
@@ -213,6 +222,7 @@ export const menuEn: Menu = [
       },
       {
         id: "tuna-olive-disc",
+        excludeFrom: ["branch-2"],
         name: "Tuna & Olive Disc",
         price: { amount: 24, currency: "SAR" },
         calories: 200,
@@ -379,12 +389,14 @@ export const menuEn: Menu = [
       },
       {
         id: "large-mug-tea-refill",
+        excludeFrom: ["branch-2"],
         name: "Large Mug Tea Refill",
         price: { amount: 21, currency: "SAR" },
         calories: 25,
       },
       {
         id: "medium-mug-tea-refill",
+        excludeFrom: ["branch-2"],
         name: "Medium Mug Tea Refill",
         price: { amount: 8, currency: "SAR" },
         calories: 25,
@@ -405,18 +417,21 @@ export const menuEn: Menu = [
       },
       {
         id: "large-saudi-coffee-refill",
+        excludeFrom: ["branch-2"],
         name: "Large Saudi Coffee Mug Refill",
         price: { amount: 27, currency: "SAR" },
         calories: 4,
       },
       {
         id: "medium-saudi-coffee-refill",
+        excludeFrom: ["branch-2"],
         name: "Medium Saudi Coffee Mug Refill",
         price: { amount: 12, currency: "SAR" },
         calories: 4,
       },
       {
         id: "blue-family-mug",
+        excludeFrom: ["branch-2"],
         name: "Blue Family Mug with Tea Refill",
         description: "Basil, zap, mint, mixed — keeps hot and cold for hours.",
         price: { amount: 69, currency: "SAR" },
@@ -424,6 +439,7 @@ export const menuEn: Menu = [
       },
       {
         id: "black-family-mug",
+        excludeFrom: ["branch-2"],
         name: "Black Family Mug with Tea Refill",
         description: "Basil, zap, mint, mixed — keeps hot and cold for hours.",
         price: { amount: 69, currency: "SAR" },
@@ -431,6 +447,7 @@ export const menuEn: Menu = [
       },
       {
         id: "medium-mug-with-tea",
+        excludeFrom: ["branch-2"],
         name: "Medium Mug with Tea Refill",
         description: "Basil, zap, mint, mixed — keeps hot and cold for hours.",
         price: { amount: 65, currency: "SAR" },
@@ -460,6 +477,7 @@ export const menuEn: Menu = [
     items: [
       {
         id: "ethiopian-cold-v60",
+        excludeFrom: ["branch-2"],
         name: "Ethiopian Cold V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
@@ -467,6 +485,7 @@ export const menuEn: Menu = [
       },
       {
         id: "ethiopian-hot-v60",
+        excludeFrom: ["branch-2"],
         name: "Ethiopian Hot V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
@@ -474,6 +493,7 @@ export const menuEn: Menu = [
       },
       {
         id: "colombian-cold-v60",
+        excludeFrom: ["branch-2"],
         name: "Colombian Cold V60",
         price: { amount: 18, currency: "SAR" },
         calories: 10,
@@ -481,6 +501,7 @@ export const menuEn: Menu = [
       },
       {
         id: "colombian-hot-v60",
+        excludeFrom: ["branch-2"],
         name: "Colombian Hot V60",
         price: { amount: 17, currency: "SAR" },
         calories: 10,
@@ -488,26 +509,36 @@ export const menuEn: Menu = [
       },
       {
         id: "luxury-crop-cold-v60",
+        excludeFrom: ["branch-2"],
         name: "Cool Luxury Crop V60",
         price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       {
         id: "luxury-crop-hot-v60",
+        excludeFrom: ["branch-2"],
         name: "Hot Premium Crop V60",
         price: { amount: 22, currency: "SAR" },
         calories: 15,
       },
       {
         id: "latte",
+        excludeFrom: ["branch-2"],
         name: "Latte",
         price: { amount: 16, currency: "SAR" },
         calories: 100,
         image: "/menu/latte.webp",
       },
-      { id: "ice-latte", name: "Ice Latte", price: { amount: 17, currency: "SAR" }, calories: 88 },
+      {
+        id: "ice-latte",
+        excludeFrom: ["branch-2"],
+        name: "Ice Latte",
+        price: { amount: 17, currency: "SAR" },
+        calories: 88,
+      },
       {
         id: "cappuccino",
+        excludeFrom: ["branch-2"],
         name: "Cappuccino",
         price: { amount: 16, currency: "SAR" },
         calories: 90,
@@ -515,38 +546,62 @@ export const menuEn: Menu = [
       },
       {
         id: "flat-white",
+        excludeFrom: ["branch-2"],
         name: "Flat White",
         price: { amount: 15, currency: "SAR" },
         calories: 40,
       },
-      { id: "cortado", name: "Cortado", price: { amount: 14, currency: "SAR" }, calories: 30 },
-      { id: "macchiato", name: "Macchiato", price: { amount: 12, currency: "SAR" }, calories: 14 },
-      { id: "espresso", name: "Espresso", price: { amount: 11, currency: "SAR" }, calories: 5 },
+      {
+        id: "cortado",
+        excludeFrom: ["branch-2"],
+        name: "Cortado",
+        price: { amount: 14, currency: "SAR" },
+        calories: 30,
+      },
+      {
+        id: "macchiato",
+        excludeFrom: ["branch-2"],
+        name: "Macchiato",
+        price: { amount: 12, currency: "SAR" },
+        calories: 14,
+      },
+      {
+        id: "espresso",
+        excludeFrom: ["branch-2"],
+        name: "Espresso",
+        price: { amount: 11, currency: "SAR" },
+        calories: 5,
+      },
       {
         id: "ice-spanish-latte",
+        excludeFrom: ["branch-2"],
         name: "Ice Spanish Latte",
         price: { amount: 19, currency: "SAR" },
         calories: 180,
       },
       {
         id: "spanish-latte",
+        excludeFrom: ["branch-2"],
         name: "Spanish Latte",
         price: { amount: 18, currency: "SAR" },
         calories: 170,
       },
       {
         id: "hot-americano",
+        excludeFrom: ["branch-2"],
         name: "Hot Americano",
         price: { amount: 13, currency: "SAR" },
         calories: 20,
       },
       {
         id: "ice-americano",
+        excludeFrom: ["branch-2"],
         name: "Ice Americano",
         price: { amount: 14, currency: "SAR" },
       },
       {
         id: "hot-chocolate",
+        excludeFrom: ["branch-2"],
         name: "Hot Chocolate",
         price: { amount: 14, currency: "SAR" },
         calories: 30,

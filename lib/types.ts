@@ -25,6 +25,8 @@ export interface MenuItem {
   badges?: Badge[];
   /** Defaults to true when omitted. */
   available?: boolean;
+  /** Branch ids (see lib/branches.ts) this item is hidden from. Omit to show everywhere. */
+  excludeFrom?: string[];
 }
 
 export interface MenuCategory {
