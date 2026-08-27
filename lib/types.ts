@@ -27,6 +27,12 @@ export interface MenuItem {
   available?: boolean;
   /** Branch ids (see lib/branches.ts) this item is hidden from. Omit to show everywhere. */
   excludeFrom?: string[];
+  /**
+   * Per-branch display order within its category, lower first. The main branch always
+   * uses file order regardless of this field. An item with no entry for a branch keeps
+   * its normal file-order position relative to other un-ordered items.
+   */
+  branchOrder?: Record<string, number>;
 }
 
 export interface MenuCategory {

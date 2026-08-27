@@ -26,13 +26,24 @@ const SOURCES: Record<Locale, Menu> = {
  * The whole menu for a locale, filtered to one branch and categories in presentation
  * order. Items tagged with `excludeFrom: [branch]` are dropped; a category left with no
  * items is dropped too, so a branch never shows an empty section header.
+ *
+ * The main branch always keeps file order. A non-main branch honours `branchOrder`: an
+ * item with an entry for this branch moves to that position (lower first); everything
+ * else keeps its normal relative order, placed after the ordered items.
  */
 export async function getMenu(locale: Locale, branch: Branch = DEFAULT_BRANCH): Promise<Menu> {
   return SOURCES[locale]
-    .map((category) => ({
-      ...category,
-      items: category.items.filter((item) => !item.excludeFrom?.includes(branch)),
-    }))
+    .map((category) => {
+      const items = category.items.filter((item) => !item.excludeFrom?.includes(branch));
+
+      if (branch !== DEFAULT_BRANCH) {
+        items.sort(
+          (a, b) => (a.branchOrder?.[branch] ?? Infinity) - (b.branchOrder?.[branch] ?? Infinity),
+        );
+      }
+
+      return { ...category, items };
+    })
     .filter((category) => category.items.length > 0);
 }
 
