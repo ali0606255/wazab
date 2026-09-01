@@ -253,14 +253,21 @@ export const menuAr: Menu = [
         excludeFrom: ["branch-2"],
         name: "شبس",
         price: { amount: 9, currency: "SAR" },
+        image: "/menu/chips.webp",
       },
       {
         id: "popcorn",
         excludeFrom: ["branch-2"],
         name: "فشار",
         price: { amount: 9, currency: "SAR" },
+        image: "/menu/popcorn.webp",
       },
-      { id: "mixed-nuts", name: "مكسرات مشكلة", price: { amount: 12, currency: "SAR" } },
+      {
+        id: "mixed-nuts",
+        name: "مكسرات مشكلة",
+        price: { amount: 12, currency: "SAR" },
+        image: "/menu/mixed-nuts.webp",
+      },
       {
         id: "pumpkin-seeds",
         excludeFrom: ["branch-2"],
@@ -360,6 +367,7 @@ export const menuAr: Menu = [
         id: "chocolate-cake",
         name: "تشوكلت كيك",
         price: { amount: 29, currency: "SAR" },
+        image: "/menu/chocolate-cake.webp",
       },
       {
         id: "san-sebastian-cheesecake",

@@ -256,14 +256,21 @@ export const menuEn: Menu = [
         excludeFrom: ["branch-2"],
         name: "Chips",
         price: { amount: 9, currency: "SAR" },
+        image: "/menu/chips.webp",
       },
       {
         id: "popcorn",
         excludeFrom: ["branch-2"],
         name: "Popcorn",
         price: { amount: 9, currency: "SAR" },
+        image: "/menu/popcorn.webp",
       },
-      { id: "mixed-nuts", name: "Mixed Nuts", price: { amount: 12, currency: "SAR" } },
+      {
+        id: "mixed-nuts",
+        name: "Mixed Nuts",
+        price: { amount: 12, currency: "SAR" },
+        image: "/menu/mixed-nuts.webp",
+      },
       {
         id: "pumpkin-seeds",
         excludeFrom: ["branch-2"],
@@ -363,6 +370,7 @@ export const menuEn: Menu = [
         id: "chocolate-cake",
         name: "Chocolate Cake",
         price: { amount: 29, currency: "SAR" },
+        image: "/menu/chocolate-cake.webp",
       },
       {
         id: "san-sebastian-cheesecake",
