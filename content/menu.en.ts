@@ -235,7 +235,7 @@ export const menuEn: Menu = [
         id: "tuna-olive-disc",
         excludeFrom: ["branch-2"],
         name: "Tuna & Olive Disc",
-        price: { amount: 24, currency: "SAR" },
+        price: { amount: 26, currency: "SAR" },
         calories: 200,
         image: "/menu/disc-bread-generic.webp",
       },

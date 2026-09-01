@@ -232,7 +232,7 @@ export const menuAr: Menu = [
         id: "tuna-olive-disc",
         excludeFrom: ["branch-2"],
         name: "قرص التونة بالزيتون",
-        price: { amount: 24, currency: "SAR" },
+        price: { amount: 26, currency: "SAR" },
         calories: 200,
         image: "/menu/disc-bread-generic.webp",
       },
