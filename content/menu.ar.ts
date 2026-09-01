@@ -248,10 +248,25 @@ export const menuAr: Menu = [
         price: { amount: 10, currency: "SAR" },
         badges: ["vegan"],
       },
-      { id: "chips", name: "شبس", price: { amount: 9, currency: "SAR" } },
-      { id: "popcorn", name: "فشار", price: { amount: 9, currency: "SAR" } },
+      {
+        id: "chips",
+        excludeFrom: ["branch-2"],
+        name: "شبس",
+        price: { amount: 9, currency: "SAR" },
+      },
+      {
+        id: "popcorn",
+        excludeFrom: ["branch-2"],
+        name: "فشار",
+        price: { amount: 9, currency: "SAR" },
+      },
       { id: "mixed-nuts", name: "مكسرات مشكلة", price: { amount: 12, currency: "SAR" } },
-      { id: "pumpkin-seeds", name: "حب قرع", price: { amount: 8, currency: "SAR" } },
+      {
+        id: "pumpkin-seeds",
+        excludeFrom: ["branch-2"],
+        name: "حب قرع",
+        price: { amount: 8, currency: "SAR" },
+      },
       {
         id: "dates-tahini",
         name: "تمر وطحينة",
@@ -290,6 +305,7 @@ export const menuAr: Menu = [
       },
       {
         id: "baklava-box",
+        excludeFrom: ["branch-2"],
         name: "صندوق بقلاوة وزّاب",
         price: { amount: 47, currency: "SAR" },
         calories: 1400,
@@ -297,22 +313,26 @@ export const menuAr: Menu = [
       },
       {
         id: "pistachio-baklava",
+        excludeFrom: ["branch-2"],
         name: "بقلاوة بستاشيو",
         price: { amount: 18, currency: "SAR" },
       },
       {
         id: "pistachio-baklava-box",
+        excludeFrom: ["branch-2"],
         name: "صندوق بقلاوة بستاشيو",
         price: { amount: 47, currency: "SAR" },
         image: "/menu/pistachio-baklava-box.webp",
       },
       {
         id: "baklava-ice-cream",
+        excludeFrom: ["branch-2"],
         name: "بقلاوة بالآيسكريم",
         price: { amount: 29, currency: "SAR" },
       },
       {
         id: "truffle-pineapple",
+        excludeFrom: ["branch-2"],
         name: "ترافل أناناس",
         price: { amount: 28, currency: "SAR" },
         calories: 705,
@@ -343,6 +363,7 @@ export const menuAr: Menu = [
       },
       {
         id: "san-sebastian-cheesecake",
+        excludeFrom: ["branch-2"],
         name: "سان سيباستيان تشيزكيك",
         price: { amount: 29, currency: "SAR" },
       },
@@ -469,14 +490,34 @@ export const menuAr: Menu = [
       },
       {
         id: "premium-saudi-coffee-beans",
+        excludeFrom: ["branch-2"],
         name: "بن سعودي فاخر",
         description: "حبوب قهوة سعودية فاخرة، معبأة لتُحضَّر في المنزل.",
         price: { amount: 55, currency: "SAR" },
       },
       {
         id: "shisha-table",
+        excludeFrom: ["branch-2"],
         name: "تشغيل شبة نار لمدة ساعة ونصف",
         price: { amount: 20, currency: "SAR" },
+      },
+    ],
+  },
+  {
+    id: "coffee-of-day",
+    name: "قهوة اليوم",
+    items: [
+      {
+        id: "iced-coffee-of-day",
+        excludeFrom: ["main"],
+        name: "قهوة اليوم بارد",
+        price: { amount: 11, currency: "SAR" },
+      },
+      {
+        id: "hot-coffee-of-day",
+        excludeFrom: ["main"],
+        name: "قهوة اليوم حار",
+        price: { amount: 11, currency: "SAR" },
       },
     ],
   },
@@ -644,11 +685,13 @@ export const menuAr: Menu = [
       },
       {
         id: "ice-tea",
+        excludeFrom: ["branch-2"],
         name: "آيس تي",
         price: { amount: 21, currency: "SAR" },
       },
       {
         id: "alfreedo",
+        excludeFrom: ["branch-2"],
         name: "الفريدو",
         price: { amount: 16, currency: "SAR" },
         image: "/menu/alfreedo.webp",

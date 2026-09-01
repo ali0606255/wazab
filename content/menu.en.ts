@@ -251,10 +251,25 @@ export const menuEn: Menu = [
         price: { amount: 10, currency: "SAR" },
         badges: ["vegan"],
       },
-      { id: "chips", name: "Chips", price: { amount: 9, currency: "SAR" } },
-      { id: "popcorn", name: "Popcorn", price: { amount: 9, currency: "SAR" } },
+      {
+        id: "chips",
+        excludeFrom: ["branch-2"],
+        name: "Chips",
+        price: { amount: 9, currency: "SAR" },
+      },
+      {
+        id: "popcorn",
+        excludeFrom: ["branch-2"],
+        name: "Popcorn",
+        price: { amount: 9, currency: "SAR" },
+      },
       { id: "mixed-nuts", name: "Mixed Nuts", price: { amount: 12, currency: "SAR" } },
-      { id: "pumpkin-seeds", name: "Pumpkin Seeds", price: { amount: 8, currency: "SAR" } },
+      {
+        id: "pumpkin-seeds",
+        excludeFrom: ["branch-2"],
+        name: "Pumpkin Seeds",
+        price: { amount: 8, currency: "SAR" },
+      },
       {
         id: "dates-tahini",
         name: "Dates & Tahini",
@@ -293,6 +308,7 @@ export const menuEn: Menu = [
       },
       {
         id: "baklava-box",
+        excludeFrom: ["branch-2"],
         name: "WZZAB Baklava Box",
         price: { amount: 47, currency: "SAR" },
         calories: 1400,
@@ -300,22 +316,26 @@ export const menuEn: Menu = [
       },
       {
         id: "pistachio-baklava",
+        excludeFrom: ["branch-2"],
         name: "Pistachio Baklava",
         price: { amount: 18, currency: "SAR" },
       },
       {
         id: "pistachio-baklava-box",
+        excludeFrom: ["branch-2"],
         name: "Pistachio Baklava Box",
         price: { amount: 47, currency: "SAR" },
         image: "/menu/pistachio-baklava-box.webp",
       },
       {
         id: "baklava-ice-cream",
+        excludeFrom: ["branch-2"],
         name: "Baklava with Ice Cream",
         price: { amount: 29, currency: "SAR" },
       },
       {
         id: "truffle-pineapple",
+        excludeFrom: ["branch-2"],
         name: "Truffle Pineapple",
         price: { amount: 28, currency: "SAR" },
         calories: 705,
@@ -346,6 +366,7 @@ export const menuEn: Menu = [
       },
       {
         id: "san-sebastian-cheesecake",
+        excludeFrom: ["branch-2"],
         name: "San Sebastian Cheesecake",
         price: { amount: 29, currency: "SAR" },
       },
@@ -472,14 +493,34 @@ export const menuEn: Menu = [
       },
       {
         id: "premium-saudi-coffee-beans",
+        excludeFrom: ["branch-2"],
         name: "Premium Saudi Coffee Beans",
         description: "Premium Saudi coffee beans, packaged to brew at home.",
         price: { amount: 55, currency: "SAR" },
       },
       {
         id: "shisha-table",
+        excludeFrom: ["branch-2"],
         name: "Shisha Session (1.5 Hours)",
         price: { amount: 20, currency: "SAR" },
+      },
+    ],
+  },
+  {
+    id: "coffee-of-day",
+    name: "Coffee of the Day",
+    items: [
+      {
+        id: "iced-coffee-of-day",
+        excludeFrom: ["main"],
+        name: "Iced Coffee of the Day",
+        price: { amount: 11, currency: "SAR" },
+      },
+      {
+        id: "hot-coffee-of-day",
+        excludeFrom: ["main"],
+        name: "Hot Coffee of the Day",
+        price: { amount: 11, currency: "SAR" },
       },
     ],
   },
@@ -647,11 +688,13 @@ export const menuEn: Menu = [
       },
       {
         id: "ice-tea",
+        excludeFrom: ["branch-2"],
         name: "Ice Tea",
         price: { amount: 21, currency: "SAR" },
       },
       {
         id: "alfreedo",
+        excludeFrom: ["branch-2"],
         name: "Alfreedo",
         price: { amount: 16, currency: "SAR" },
         image: "/menu/alfreedo.webp",
