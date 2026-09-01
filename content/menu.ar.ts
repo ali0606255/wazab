@@ -380,6 +380,7 @@ export const menuAr: Menu = [
         name: "معمول تمر",
         price: { amount: 5, currency: "SAR" },
         calories: 130,
+        image: "/menu/date-maamoul.webp",
       },
       {
         id: "cheese-cell",
