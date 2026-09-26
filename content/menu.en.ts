@@ -183,7 +183,7 @@ export const menuEn: Menu = [
         description: "A fresh-baked disc, pizza style, topped with halloumi and pesto.",
         price: { amount: 27, currency: "SAR" },
         badges: ["vegetarian"],
-        image: "/menu/disc-bread-generic.webp",
+        image: "/menu/halloumi-pesto-disc.webp",
       },
       {
         id: "halloumi-pesto-flatbread",
