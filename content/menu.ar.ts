@@ -497,7 +497,7 @@ export const menuAr: Menu = [
         id: "shisha-table",
         excludeFrom: ["branch-2"],
         name: "تشغيل شبة نار لمدة ساعة ونصف",
-        price: { amount: 20, currency: "SAR" },
+        price: { amount: 15, currency: "SAR" },
       },
     ],
   },

@@ -500,7 +500,7 @@ export const menuEn: Menu = [
         id: "shisha-table",
         excludeFrom: ["branch-2"],
         name: "Shisha Session (1.5 Hours)",
-        price: { amount: 20, currency: "SAR" },
+        price: { amount: 15, currency: "SAR" },
       },
     ],
   },
